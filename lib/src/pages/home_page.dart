@@ -282,7 +282,7 @@ class HomePage extends StatelessWidget {
                       final route = MaterialPageRoute(builder: (context) {
                         return TestFacil();
                       });
-                      Navigator.push(context,route);
+                      Navigator.pushReplacement(context, route);
                     },
                   )
                 ],

@@ -100,26 +100,9 @@ class _TestFacilState extends State<TestFacil> {
                         color: Colors.green,
                         child: Icon(Icons.mood, size: 100.0),
                         onPressed: () {
-                          //tf.getAnswer();//Posiblemente este de adorno
                           setState(() {
                             tf.respuestausuario = true;
-
-                            //VALIDAR SI ES AREA1
                             tf.validararea();
-                            print(tf.area1);
-
-                            //VALIDAR SI ES AREA 2
-                            print(tf.area2);
-
-                            //VALIDAR SI ES AREA 3
-                            print(tf.area3);
-
-                            //VALIDAR SI ES AREA 4
-                            print(tf.area4);
-
-                            //VALIDAR AREA 5
-                            print(tf.area5);
-
                             tf.nextQuestion(context);
                             print('siguiente pregunta');
                           });
@@ -136,8 +119,6 @@ class _TestFacilState extends State<TestFacil> {
                         child:
                             Icon(Icons.mood, size: 100.0, color: Colors.white),
                         onPressed: () {
-                          // bool result =
-                          //     tf.getAnswer(); //posiblemnte este de adorno tambien
                           setState(() {
                             tf.respuestausuario = false;
                             tf.nextQuestion(context);

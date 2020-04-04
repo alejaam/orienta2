@@ -179,25 +179,29 @@ class CuestionarioFacil {
     });
   }
 
-  String getResult(){
-    var lista = new List();
+  String getResult() {
     var mayor;
-    // lista..add(area1)..add(area2)..add(area3)..add(area4)..add(area5);
-    // lista.forEach((item) => {
-    //   mayor = (item > mayor)? item : mayor
-    // }
-    // );
-    // lista.sort();
-    // print(lista);
-    if(area1 >= area2 && area1 >= area3 && area1 >= area4 && area1 >= area5){
+    if (area1 >= area2 && area1 >= area3 && area1 >= area4 && area1 >= area5) {
       mayor = "Felicidades, tienes aptitudes para entrar al área 1";
-    }else if(area2 >= area1 && area2 >= area3 && area2 >= area4 && area2 >= area5){
+    } else if (area2 >= area1 &&
+        area2 >= area3 &&
+        area2 >= area4 &&
+        area2 >= area5) {
       mayor = "Felicidades, tienes aptitudes para entrar al área 2";
-    }else if(area3 >= area1 && area3 >= area2 && area3 >= area4 && area3 >= area5){
+    } else if (area3 >= area1 &&
+        area3 >= area2 &&
+        area3 >= area4 &&
+        area3 >= area5) {
       mayor = "Felicidades, tienes aptitudes para entrar al área 3";
-    }else if(area4 >= area1 && area4 >= area2 && area4 >= area3 && area4 >= area5){
+    } else if (area4 >= area1 &&
+        area4 >= area2 &&
+        area4 >= area3 &&
+        area4 >= area5) {
       mayor = "Felicidades, tienes aptitudes para entrar al área 4";
-    }else if(area5 >= area1 && area5 >= area2 && area5 >= area3 && area5 >= area4){
+    } else if (area5 >= area1 &&
+        area5 >= area2 &&
+        area5 >= area3 &&
+        area5 >= area4) {
       mayor = "Felicidades, tienes aptitudes para entrar al área 5";
     }
     return mayor;
@@ -296,7 +300,6 @@ class CuestionarioFacil {
       case 76:
         area5++;
         break;
-
       default:
     }
   }
