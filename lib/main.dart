@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      // initialRoute: '/',
-      // routes: {
-      //   '/': (BuildContext context) => splashScreen(),
-      // },
-      home: Splash(),
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext context) => Splash(),
+      },
+      // home: Splash(),
     );
   }
 }

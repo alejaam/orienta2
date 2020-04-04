@@ -12,22 +12,25 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
-    return new SplashScreen(
+    return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: new HomePage(),
-      title: new Text('Orienta-T',
-      style: new TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: 50.0,
-        color: Colors.white
-      ),),
+      navigateAfterSeconds: HomePage(),
+      title: Text(
+        'Orienta-T',
+        style: TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 50.0, color: Colors.white),
+      ),
       // image: new Image.network('https://i.imgur.com/TyCSG9A.png'),
       backgroundColor: Color.fromRGBO(38, 93, 130, 1),
-      styleTextUnderTheLoader: new TextStyle(),
+      styleTextUnderTheLoader: TextStyle(),
       // photoSize: 100.0,
-      onClick: ()=>print("No desesperes"),
-      loaderColor: Colors.white,
-      loadingText: Text("All rigths reserved."),
+      onClick: () => print("No desesperes"),
+      loaderColor: Color.fromRGBO(69, 142, 190, 1),
+      loadingText:
+          Text("All rigths reserved.", style: TextStyle(color: Colors.white)),
+          
     );
   }
 }
+
+

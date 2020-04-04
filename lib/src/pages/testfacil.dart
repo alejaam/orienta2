@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:orientat/src/pages/cuestionariofacil.dart';
 
 CuestionarioFacil tf = CuestionarioFacil();
-bool ru = true;
-int area1t = 0;
-int area2t = 0;
-int area3t = 0;
-int area4t = 0;
-int area5t = 0;
 
 class TestFacil extends StatefulWidget {
   @override
@@ -19,101 +13,145 @@ class _TestFacilState extends State<TestFacil> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Expanded(
-          flex: 5,
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Center(
-              child: Text(
-                tf.getQuestionText(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.white,
+    final _screenSize = MediaQuery.of(context).size;
+    return WillPopScope(
+      onWillPop: () async => true,
+      child: Scaffold(
+        backgroundColor: Color.fromRGBO(187, 225, 250, 1),
+        appBar: AppBar(
+          title: Text("Orienta-T"),
+          backgroundColor: Color.fromRGBO(38, 93, 130, 1),
+          actions: <Widget>[
+            Container(
+              child: Icon(Icons.notifications_none),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              // child:
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Image.network(
+                  'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg',
+                  width: 40,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
-              child: Text(
-                'Me Interesa',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                ),
-              ),
-              onPressed: () {
-                //tf.getAnswer();//Posiblemente este de adorno
-                setState(() {
-                  tf.respuestausuario = true;
-
-                  //VALIDAR SI ES AREA1
-                  tf.validararea1();
-                  area1t = tf.area1;
-                  print('$area1t');
-
-                  //VALIDAR SI ES AREA 2
-                  tf.validararea2();
-                  area2t = tf.area2;
-                  print('$area2t');
-
-                  //VALIDAR SI ES AREA 3
-                  tf.validararea3();
-                  area3t = tf.area3;
-                  print('$area3t');
-
-                  //VALIDAR SI ES AREA 4
-                  tf.validararea4();
-                  area4t = tf.area4;
-                  print('$area4t');
-
-                  //VALIDAR AREA 5
-                  tf.validararea5();
-                  area5t = tf.area5;
-                  print('$area5t');
-
-                  tf.nextQuestion();
-                  print('siguiente preg');
-                });
-              },
+            Padding(
+              padding: const EdgeInsets.only(right: 15.0),
+              child: Center(child: Text("ale_jaam")),
             ),
-          ),
+          ],
         ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
-              child: Text(
-                'No me interesa ',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                ),
+        body: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              height: _screenSize.height / 2,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 250,
+                    width: _screenSize.height / 2,
+                    child: Card(
+                      color: Color.fromRGBO(69, 142, 190, 1),
+                      elevation: 10.0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Column(
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Center(
+                                    child: Text(
+                                      tf.getQuestionText(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 25.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ]),
+                    ),
+                  ),
+                ],
               ),
-              onPressed: () {
-                // bool result =
-                //     tf.getAnswer(); //posiblemnte este de adorno tambien
-                setState(() {
-                  tf.respuestausuario = false;
-                  ru = false;
-                  tf.nextQuestion();
-                });
-              },
             ),
-          ),
+            Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0)),
+                        textColor: Colors.white,
+                        color: Colors.green,
+                        child: Icon(Icons.mood, size: 100.0),
+                        onPressed: () {
+                          //tf.getAnswer();//Posiblemente este de adorno
+                          setState(() {
+                            tf.respuestausuario = true;
+
+                            //VALIDAR SI ES AREA1
+                            tf.validararea();
+                            print(tf.area1);
+
+                            //VALIDAR SI ES AREA 2
+                            print(tf.area2);
+
+                            //VALIDAR SI ES AREA 3
+                            print(tf.area3);
+
+                            //VALIDAR SI ES AREA 4
+                            print(tf.area4);
+
+                            //VALIDAR AREA 5
+                            print(tf.area5);
+
+                            tf.nextQuestion(context);
+                            print('siguiente pregunta');
+                          });
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(18.0)),
+                        color: Colors.red,
+                        child:
+                            Icon(Icons.mood, size: 100.0, color: Colors.white),
+                        onPressed: () {
+                          // bool result =
+                          //     tf.getAnswer(); //posiblemnte este de adorno tambien
+                          setState(() {
+                            tf.respuestausuario = false;
+                            tf.nextQuestion(context);
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ],
         ),
-      ],
+      ),
     );
   }
 }
