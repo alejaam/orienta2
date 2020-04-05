@@ -182,27 +182,27 @@ class CuestionarioFacil {
   String getResult() {
     var mayor;
     if (area1 >= area2 && area1 >= area3 && area1 >= area4 && area1 >= area5) {
-      mayor = "Felicidades, tienes aptitudes para entrar al área 1";
+      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 1 - Arte y Creatividad!";
     } else if (area2 >= area1 &&
         area2 >= area3 &&
         area2 >= area4 &&
         area2 >= area5) {
-      mayor = "Felicidades, tienes aptitudes para entrar al área 2";
+      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 2 - Ciencias Sociales!";
     } else if (area3 >= area1 &&
         area3 >= area2 &&
         area3 >= area4 &&
         area3 >= area5) {
-      mayor = "Felicidades, tienes aptitudes para entrar al área 3";
+      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 3 - Ecónomica, Administrativa y Financiera!";
     } else if (area4 >= area1 &&
         area4 >= area2 &&
         area4 >= area3 &&
         area4 >= area5) {
-      mayor = "Felicidades, tienes aptitudes para entrar al área 4";
+      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 4 - Ciencia y Tecnología!";
     } else if (area5 >= area1 &&
         area5 >= area2 &&
         area5 >= area3 &&
         area5 >= area4) {
-      mayor = "Felicidades, tienes aptitudes para entrar al área 5";
+      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 5 - Ciencias Ecológicas, Biológicas y De La Salud!";
     }
     return mayor;
   }

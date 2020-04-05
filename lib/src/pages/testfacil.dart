@@ -15,7 +15,7 @@ class _TestFacilState extends State<TestFacil> {
   Widget build(BuildContext context) {
     final _screenSize = MediaQuery.of(context).size;
     return WillPopScope(
-      onWillPop: () async => true,
+      onWillPop: () async => false,
       child: Scaffold(
         backgroundColor: Color.fromRGBO(187, 225, 250, 1),
         appBar: AppBar(
@@ -117,7 +117,7 @@ class _TestFacilState extends State<TestFacil> {
                             borderRadius: new BorderRadius.circular(18.0)),
                         color: Colors.red,
                         child:
-                            Icon(Icons.mood, size: 100.0, color: Colors.white),
+                            Icon(Icons.mood_bad, size: 100.0, color: Colors.white),
                         onPressed: () {
                           setState(() {
                             tf.respuestausuario = false;

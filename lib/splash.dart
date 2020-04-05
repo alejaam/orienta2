@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/home_page.dart';
+import 'package:orientat/src/pages/login_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 class Splash extends StatefulWidget {
@@ -14,7 +14,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: HomePage(),
+      navigateAfterSeconds: LoginPage(),
       title: Text(
         'Orienta-T',
         style: TextStyle(

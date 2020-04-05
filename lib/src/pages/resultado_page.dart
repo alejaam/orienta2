@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/cuestionariofacil.dart';
-import 'package:orientat/src/pages/testfacil.dart';
+import 'package:orientat/src/pages/home_page.dart';
 
 class ResultadoPage extends StatelessWidget {
   final String text;
@@ -9,14 +8,6 @@ class ResultadoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home), title: Text("Inicio")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.explicit), title: Text("Other")),
-        ],
-      ),
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
       appBar: AppBar(
         title: Text("Orienta-T"),
@@ -49,43 +40,49 @@ class ResultadoPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
-        child: Container(child: cards(context)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            resultCard(context),
+            Column(
+              children: <Widget>[
+                SizedBox(
+                  child: FlatButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0)),
+                    textColor: Colors.white,
+                    color: Color.fromRGBO(49, 59, 64, 1),
+                    child: Text("Volver a inicio", style: TextStyle(fontSize: 30.0)),
+                    onPressed: () {
+                      final route = new MaterialPageRoute(builder: (context) {
+                        return HomePage();
+                      });
+                      Navigator.of(context).pushReplacement(route);
+                    },
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
 
-  Widget cards(context) {
-    return GestureDetector(
-      onTap: () {
-        print("Hola");
-      },
-      child: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Card(
-            color: Color.fromRGBO(69, 142, 190, 1),
-            elevation: 10.0,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            child: InkWell(
-              onTap: () {},
-              borderRadius: BorderRadius.circular(20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Center(
-                        child: new Text(text,
-                            style: new TextStyle(
-                                fontSize: 35.0, color: Colors.white)),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+  Widget resultCard(context) {
+    return Container(
+      // decoration: BoxDecoration(border: Border.all()),
+      height: 250.0,
+      child: Card(
+        color: Color.fromRGBO(69, 142, 190, 1),
+        elevation: 10.0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Center(
+          child: Text(text,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 30.0, color: Colors.white)),
+          //  Text(text,
+          //     style: TextStyle(fontSize: 35.0, color: Colors.white)),
         ),
       ),
     );
