@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _bottomNavigationBar(context),
+      // bottomNavigationBar: _bottomNavigationBar(context),
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
       drawer: Theme(
           data: Theme.of(context)
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                 final route = new MaterialPageRoute(builder: (context) {
                   return ProfilePage();
                 });
-                Navigator.pushReplacement(context, route);
+                Navigator.push(context, route);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),

@@ -11,7 +11,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: _bottomNavigationBar(context),
+      // bottomNavigationBar: _bottomNavigationBar(context),
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
       appBar: AppBar(
         title: Text("Orienta-T"),
@@ -44,38 +44,42 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
-        child: Container(
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: <Widget>[
-            ],
-          ),
-        ),
+        child: _profilePicture(),
+        // _profileInfo(),
       ),
     );
   }
 
-  Widget _bottomNavigationBar(context) {
-    return Theme(
-      data: Theme.of(context).copyWith(
-          canvasColor: Color.fromRGBO(69, 142, 190, 1),
-          primaryColor: Color.fromRGBO(49, 59, 64, 1),
-          textTheme: Theme.of(context).textTheme.copyWith(
-              caption: TextStyle(color: Color.fromRGBO(193, 227, 250, 1)))),
-      child: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 30), title: Container()),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.bubble_chart, size: 30), title: Container()),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.perm_identity, size: 30), title: Container())
+  Widget _profilePicture() {
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.network(
+                      'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg',
+                      width: 150,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+          Column(
+            children: <Widget>[],
+          )
         ],
-        onTap: (index){
-
-        },
       ),
     );
+  }
+
+  Widget _profileInfo() {
+    return Container();
   }
 }
