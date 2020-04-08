@@ -1,6 +1,7 @@
 // import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
 import 'package:orientat/src/pages/profile_page.dart';
+import 'package:orientat/src/widgets/drawer_widget.dart';
 
 class SuperioresPage extends StatelessWidget {
   const SuperioresPage({Key key}) : super(key: key);
@@ -9,7 +10,8 @@ class SuperioresPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
-      bottomNavigationBar: _bottomNavigationBar(context),
+      // bottomNavigationBar: _bottomNavigationBar(context),
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: Text("Orienta-T"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),

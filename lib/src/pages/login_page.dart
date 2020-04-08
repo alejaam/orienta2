@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orientat/src/pages/home_page.dart';
-import 'package:orientat/utilities/constants.dart';
+import 'package:orientat/utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
   @override
