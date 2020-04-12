@@ -10,6 +10,11 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+    String _nombre = "";
+    String _email = "";
+    String _fecha = "";
+    final _screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       // bottomNavigationBar: _bottomNavigationBar(context),
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
@@ -42,12 +47,93 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
+      body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+            ),
+            _headerColor(_screenSize),
+            _getInfo(_screenSize),
+            // _userAdress(_screenSize),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _headerColor(_screenSize) {
+    return Positioned(
+      top: 0,
+      child: Container(
+        color: Color.fromRGBO(69, 142, 190, 1),
+        height: _screenSize.height / 4.2,
+        width: MediaQuery.of(context).size.width,
+      ),
+    );
+  }
+
+  Widget _getInfo(_screenSize) {
+    return Positioned(
+      top: 115,
+      child: Container(
+        margin: EdgeInsets.all(20),
+        width: MediaQuery.of(context).size.width * 0.95,
         child: Container(
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: <Widget>[],
+          width: _screenSize.height,
+          // padding: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text("Información de usuario",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+              SizedBox(
+                height: 20,
+              ),
+              CircleAvatar(
+                radius: 60,
+                backgroundImage: NetworkImage(
+                    'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Alejandro Alamar",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 25,
+                ),
+              ),
+              Text(
+                "ale_jaam",
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 25,
+                ),
+              ),
+              Text(
+                "Student",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                "ale.jaam7@gmail.com",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+            ],
           ),
         ),
       ),

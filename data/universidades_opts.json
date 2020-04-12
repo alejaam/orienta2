@@ -1,0 +1,25 @@
+{
+    "nombreApp": "Orienta-T",
+    "rutas": [
+        {
+            "ruta": "carreras",
+            "icon": "school",
+            "texto": "Carreras"
+        },
+        {
+            "ruta": "map",
+            "icon": "location_on",
+            "texto": "Ubicacion"
+        },
+        {
+            "ruta": "plan",
+            "icon": "description",
+            "texto": "Puntaje"
+        },
+        {
+            "ruta": "others",
+            "icon": "calendar_today",
+            "texto": "Otros datos"
+        }
+    ]
+}

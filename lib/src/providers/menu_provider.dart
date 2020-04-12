@@ -10,9 +10,9 @@ class _MenuProvider {
     // cargarData();
   }
 
-  Future <List<dynamic>> cargarData() async{
+  Future <List<dynamic>> cargarData(file) async{
 
-  final response = await rootBundle.loadString('data/menu_opts.json');
+  final response = await rootBundle.loadString('data/$file');
         Map dataMap = json.decode(response);
         opciones = dataMap['rutas'];
         return opciones;  

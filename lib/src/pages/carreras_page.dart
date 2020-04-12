@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class SuperioresPage extends StatelessWidget {
-  const SuperioresPage({Key key}) : super(key: key);
+class CarrerasPage extends StatelessWidget {
+  const CarrerasPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,67 +51,56 @@ class SuperioresPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(20),
         children: <Widget>[
-          _cardTipo2(
-              'https://www.encb.ipn.mx/assets/files/encb/img/escudos/logo-ipn.png',
-              'Instituto Politécnico Nacional',
-              context),
+          _cardTipo2('Ingeniería Aeronáutica', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo-UNAM-escalable.svg/1200px-Escudo-UNAM-escalable.svg.png',
-              'Universidad Nacional Autónoma de México',
-              context),
+          _cardTipo2('Ingeniería Ambiental', context),
           SizedBox(height: 20.0),
-          _cardTipo2('http://www.uam.mx/identidad/emblemaylema/logogrande.gif',
-              'Universidad Autónoma Metropolitana', context),
+          _cardTipo2('Ingeniería Biomédica', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://universidadesdemexico.mx/logos/original/logo-uvm-universidad-del-valle-de-mexico.png',
-              'Unversidad del Valle de México',
-              context),
+          _cardTipo2('Ingeniería Biónica', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://i.pinimg.com/originals/f2/7d/8c/f27d8c1b680c3c2a9fe72377d79d00b1.jpg',
-              'Escuela Nacional para Maestras de Jardines de Niños',
-              context),
+          _cardTipo2('Ingeniería en Informática', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://seeklogo.com/images/U/UPN_-_Universidad_Pedag__gica_Nacional-logo-092C2CED63-seeklogo.com.png',
-              'Universidad Pedagógica Nacional',
-              context),
+          _cardTipo2(' Ingeniería en Metalurgia y Materiales', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://pbs.twimg.com/profile_images/837060980798554112/m38LPWQK.jpg',
-              'Escuela Nacional de Entrenadores Deportivos',
-              context),
+          _cardTipo2('Licenciatura en Ciencias de la Informática', context),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://mextudia.com/wp-content/uploads/2018/08/Logo-Escuela-Superior-de-Educaci%C3%B3n-F%C3%ADsica.png',
-              'Escuela Superior de Educación Física',
-              context)
+          _cardTipo2('Licenciatura en Física y Matemáticas', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciado en Nutrición', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciado en Psicología', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería Aeronáutica', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería Ambiental', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería Biomédica', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería Biónica', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería en Informática', context),
+          SizedBox(height: 20.0),
+          _cardTipo2(' Ingeniería en Metalurgia y Materiales', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciatura en Ciencias de la Informática', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciatura en Física y Matemáticas', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciado en Nutrición', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Licenciado en Psicología', context),
         ],
       ),
     );
   }
 
-  Widget _cardTipo2(url, school, context) {
+  Widget _cardTipo2(school, context) {
     final card = Container(
       child: Container(
+        height: 100,
         child: Row(
           children: <Widget>[
-            Flexible(
-              child: Container(
-                width: 120,
-                height: 100,
-                padding: EdgeInsets.only(left: 15.0),
-                child: FadeInImage(
-                  image: NetworkImage(url),
-                  placeholder: AssetImage("assets/loading.gif"),
-                  fadeInDuration: Duration(milliseconds: 200),
-                  height: 100.0,
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
             Container(
               child: Text(
                 school,
@@ -125,10 +115,8 @@ class SuperioresPage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print("HOLA");
-        final route = new MaterialPageRoute(builder: (context) {
-          return IpnPage();
-        });
-        Navigator.push(context, route);
+        _launchURL(
+            'https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Licenciatura-en-Ciencias-de-la-Inform%C3%A1tica.pdf');
       },
       child: Container(
         decoration: BoxDecoration(
@@ -145,5 +133,13 @@ class SuperioresPage extends StatelessWidget {
             ClipRRect(borderRadius: BorderRadius.circular(30.0), child: card),
       ),
     );
+  }
+
+  _launchURL(url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/home_page.dart';
 import 'package:orientat/src/pages/login_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
