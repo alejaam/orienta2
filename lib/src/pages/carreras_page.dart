@@ -1,6 +1,5 @@
 // import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
 import 'package:url_launcher/url_launcher.dart';

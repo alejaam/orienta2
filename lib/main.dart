@@ -7,10 +7,8 @@ import 'package:orientat/src/pages/mapa_page.dart';
 import 'package:orientat/src/pages/noticias_page.dart';
 import 'package:orientat/src/pages/planEstudios_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
-import 'package:orientat/src/pages/resultado_page.dart';
 import 'package:orientat/src/pages/superiores_page.dart';
 import 'package:orientat/src/pages/test_page.dart';
-import 'package:orientat/src/pages/ubicacion_page.dart';
 // import 'package:orientat/src/pages/home_page.dart';
 
 void main() => runApp(MyApp());

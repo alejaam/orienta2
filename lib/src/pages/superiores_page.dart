@@ -1,4 +1,3 @@
-// import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
 import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
@@ -95,6 +94,7 @@ class SuperioresPage extends StatelessWidget {
   Widget _cardTipo2(url, school, context) {
     final card = Container(
       child: Container(
+        padding: EdgeInsets.all(5.0),
         child: Row(
           children: <Widget>[
             Flexible(
@@ -124,11 +124,11 @@ class SuperioresPage extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        print("HOLA");
-        final route = new MaterialPageRoute(builder: (context) {
-          return IpnPage();
-        });
-        Navigator.push(context, route);
+            print("HOLA");
+            final route = new MaterialPageRoute(builder: (context) {
+              return IpnPage();
+            });
+            Navigator.push(context, route);
       },
       child: Container(
         decoration: BoxDecoration(

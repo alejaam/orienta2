@@ -1,0 +1,22 @@
+{
+    "superiores": [
+        
+        {
+            "id": 1,
+            "nombre": "UPIICSA",
+            "institucion": "Instituto Politécnico Nacional",
+            "clave": "100215255",
+            "tipo": 2,
+            "Plantel" : "",
+            "carreras": [
+                "Administración Industrial",
+                "Ingenieria En Transporte",
+                "Ingenieria Industrial",
+                "Ingenieria Informática",
+                "Ciencias De La Informática",
+                "Automotriz"
+            ],
+            "realizarTest": false
+        }
+    ]
+}

@@ -10,9 +10,9 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    String _nombre = "";
-    String _email = "";
-    String _fecha = "";
+    // String _nombre = "";
+    // String _email = "";
+    // String _fecha = "";
     final _screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
