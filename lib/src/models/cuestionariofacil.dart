@@ -182,34 +182,38 @@ class CuestionarioFacil {
   String getResult() {
     var mayor;
     if (area1 >= area2 && area1 >= area3 && area1 >= area4 && area1 >= area5) {
-      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 1 - Arte y Creatividad!";
+      mayor =
+          "¡Felicidades, tienes aptitudes para entrar al Área 1 - Arte y Creatividad!";
     } else if (area2 >= area1 &&
         area2 >= area3 &&
         area2 >= area4 &&
         area2 >= area5) {
-      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 2 - Ciencias Sociales!";
+      mayor =
+          "¡Felicidades, tienes aptitudes para entrar al Área 2 - Ciencias Sociales!";
     } else if (area3 >= area1 &&
         area3 >= area2 &&
         area3 >= area4 &&
         area3 >= area5) {
-      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 3 - Ecónomica, Administrativa y Financiera!";
+      mayor =
+          "¡Felicidades, tienes aptitudes para entrar al Área 3 - Ecónomica, Administrativa y Financiera!";
     } else if (area4 >= area1 &&
         area4 >= area2 &&
         area4 >= area3 &&
         area4 >= area5) {
-      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 4 - Ciencia y Tecnología!";
+      mayor =
+          "¡Felicidades, tienes aptitudes para entrar al Área 4 - Ciencia y Tecnología!";
     } else if (area5 >= area1 &&
         area5 >= area2 &&
         area5 >= area3 &&
         area5 >= area4) {
-      mayor = "¡Felicidades, tienes aptitudes para entrar al Área 5 - Ciencias Ecológicas, Biológicas y De La Salud!";
+      mayor =
+          "¡Felicidades, tienes aptitudes para entrar al Área 5 - Ciencias Ecológicas, Biológicas y De La Salud!";
     }
     return mayor;
   }
 
-  //se viene un desmadre para poder dar resultado  AREA1
   void validararea() {
-    switch (_questionNumber) {
+    switch (_questionNumber+1) {
       case 4:
       case 9:
       case 12:
@@ -226,7 +230,9 @@ class CuestionarioFacil {
       case 68:
       case 75:
       case 77:
-        area1++;
+        {
+          area1++;
+        }
         break;
       case 6:
       case 13:
@@ -244,7 +250,9 @@ class CuestionarioFacil {
       case 70:
       case 72:
       case 78:
-        area2++;
+        {
+          area2++;
+        }
         break;
       case 5:
       case 10:
@@ -262,7 +270,9 @@ class CuestionarioFacil {
       case 62:
       case 71:
       case 80:
-        area3++;
+        {
+          area3++;
+        }
         break;
       case 1:
       case 7:
@@ -280,7 +290,9 @@ class CuestionarioFacil {
       case 64:
       case 73:
       case 79:
-        area4++;
+        {
+          area4++;
+        }
         break;
       case 2:
       case 3:
@@ -298,9 +310,16 @@ class CuestionarioFacil {
       case 69:
       case 74:
       case 76:
-        area5++;
+        {
+          area5++;
+        }
         break;
-      default:
     }
+    print('====${_questionNumber}====');
+    print('Respuestas area 1: $area1');
+    print('Respuestas area 2: $area2');
+    print('Respuestas area 3: $area3');
+    print('Respuestas area 4: $area4');
+    print('Respuestas area 5: $area5');
   }
 }

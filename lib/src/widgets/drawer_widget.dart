@@ -32,7 +32,7 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.local_activity),
-            title: Text('Orienta-T Pro'),
+            title: Text('Orienta2 Pro'),
             onTap: () {
               Navigator.pop(context);
             },

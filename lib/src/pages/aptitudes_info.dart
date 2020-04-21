@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
+import 'package:orientat/utils/icono_string_util.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class NoticiasPage extends StatefulWidget {
-  const NoticiasPage({Key key}) : super(key: key);
+class AptitudesInfoPage extends StatefulWidget {
+  const AptitudesInfoPage({Key key}) : super(key: key);
 
   @override
-  _NoticiasPageState createState() => _NoticiasPageState();
+  _AptitudesInfoPageState createState() => _AptitudesInfoPageState();
 }
 
-class _NoticiasPageState extends State<NoticiasPage> {
+class _AptitudesInfoPageState extends State<AptitudesInfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,27 +54,57 @@ class _NoticiasPageState extends State<NoticiasPage> {
       body: ListView(
         padding: EdgeInsets.all(10),
         children: <Widget>[
+          Row(children: <Widget>[
+            Text(
+              "Perfil Ingreso ",
+              style: TextStyle(fontSize: 20.0),
+            ),
+            Expanded(
+                child: Divider(
+              height: 50.0,
+              color: Colors.black,
+            )),
+          ]),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              "Amplía   politécnico registro en  línea para nivel superior",
-              'https://periodicoeltiempo.mx/wp-content/uploads/2020/04/10-POLITECNICO.jpg'),
+          _cardTipo1(
+              "Los aspirantes al ingresar a la Licenciatura de Ingeniería en Informática deberán contar con los conocimientos y habilidades básicas del nivel medio superior que garanticen el adecuado desempeño en el nivel superior, así como: Actitudes y Valores necesarios para el desarrollo de su proceso formativo Una posición activa frente al estudio y desarrollo de las actividades, proyectos y trabajos requeridos coincidentes."),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              "Convoca SEP a ingresar al nivel superior en modalidad Abierta y a Distancia",
-              'https://www.diariodemorelos.com/noticias/sites/default/files/field/image/Convoca%20SEP%20a%20ingresar%20al%20nivel%20superior%20en%20modalidad%20Abierta%20y%20a%20Distancia.jpg'),
+          Row(children: <Widget>[
+            Text(
+              "Perfil Egreso",
+              style: TextStyle(fontSize: 20.0),
+            ),
+            Expanded(
+                child: Divider(
+              height: 50.0,
+              color: Colors.black,
+            )),
+          ]),
           SizedBox(height: 20.0),
-          _cardTipo2(
-              "Lanzan convocatoria para becas de nivel superior y posgrado",
-              'https://www.elheraldodechihuahua.com.mx/local/noroeste/lbj8n7-1-en-madera-lanzan-convocatoria-para-becas-de-media-superior-y-posgrado-foto-municipio-de-madera.jpg/alternates/LANDSCAPE_768/1%20En%20Madera,%20lanzan%20convocatoria%20para%20becas%20de%20media%20superior%20y%20posgrado%20FOTO%20MUNICIPIO%20DE%20MADERA.jpg'),
-          SizedBox(height: 20.0),
-          _cardTipo2(
-              "Aplaza UNAM convocatoria de pase reglamentado a nivel superior",
-              'https://www.jornada.com.mx/ultimas/2020/04/01/aplaza-unam-convocatoria-de-pase-reglamentado-a-nivel-superior-9388.html/convocatoria.jpg-8809.html/image_large'),
-          SizedBox(height: 20.0),
-          _cardTipo2(
-              "UAM, BUAP, Anáhuac y más universidades también retirarán internos de hospitales ante COVID-19",
-              'https://www.infobae.com/new-resizer/5vzkSH87fSvhU3KsCXX17cwK8-M=/750x0/filters:quality(100)/arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/YWAO3IQUIVHVTCPIL2WMM75K4I.jpeg'),
-          SizedBox(height: 20.0),
+          _cardTipo1(
+              "Ser la Unidad Académica interdisciplinaria líder en su oferta académica, incluyente, de prestigio nacional e internacional, que forme generaciones de profesionales responsables y honestos, innovadores y emprendedores, que diseñen e implanten soluciones con un alto respeto a la vida y responsabilidad social, estableciendo modelos disyuntivos que contribuyan al desarrollo social, económico y de la innovación tecnológica del país, interactuando en una economía mundial."),
+        ],
+      ),
+    );
+  }
+
+  Widget _cardTipo1(body) {
+    return Card(
+      elevation: 10.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Column(
+        children: <Widget>[
+          ListTile(
+            // title: Text("Soy el titulo de esta tarjeta"),
+            subtitle: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                body,
+                style: TextStyle(fontSize: 16.0, color: Colors.black),
+                textAlign: TextAlign.justify,
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -83,8 +114,9 @@ class _NoticiasPageState extends State<NoticiasPage> {
     // final random = Random();
     // int imagen = random.nextInt(300);
     final card = GestureDetector(
-      onTap: (){
-        _launchURL('https://www.infobae.com/america/mexico/2020/04/08/uam-buap-anahuac-y-mas-universidades-tambien-retiraran-internos-de-hospitales-ante-covid-19/');
+      onTap: () {
+        _launchURL(
+            'https://www.infobae.com/america/mexico/2020/04/08/uam-buap-anahuac-y-mas-universidades-tambien-retiraran-internos-de-hospitales-ante-covid-19/');
       },
       // clipBehavior: Clip.antiAlias,
       child: Container(
@@ -124,7 +156,7 @@ class _NoticiasPageState extends State<NoticiasPage> {
     );
   }
 
-   _launchURL(url) async {
+  _launchURL(url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {

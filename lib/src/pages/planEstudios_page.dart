@@ -14,7 +14,7 @@ class PlanEstudiosPage extends StatelessWidget {
       // bottomNavigationBar: _bottomNavigationBar(context),
       drawer: MyDrawer(),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
         actions: <Widget>[
           Container(

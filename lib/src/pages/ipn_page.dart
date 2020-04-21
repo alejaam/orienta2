@@ -21,7 +21,7 @@ class _IpnPageState extends State<IpnPage> {
               .copyWith(canvasColor: Color.fromRGBO(187, 225, 250, 1)),
           child: MyDrawer()),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
         actions: <Widget>[
           Container(

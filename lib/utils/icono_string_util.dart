@@ -14,6 +14,7 @@ final _icons = <String, IconData>{
   "calendar_today": Icons.calendar_today,
   "assessment"    : Icons.assessment,
   "location_on"   : Icons.location_on,
+  "person"        : Icons.person,
 };
 
 Icon getIcon(String nombreIcono){

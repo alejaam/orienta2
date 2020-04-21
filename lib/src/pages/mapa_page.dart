@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:orientat/src/pages/profile_page.dart';
-import 'package:orientat/src/pages/superiores_page.dart';
-import 'package:orientat/src/pages/test_page.dart';
-import 'package:orientat/src/providers/menu_provider.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
-import 'package:orientat/utils/icono_string_util.dart';
-import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong/latlong.dart';
 
 class MapaPage extends StatefulWidget {
@@ -27,7 +21,7 @@ class _MapaPageState extends State<MapaPage> {
               .copyWith(canvasColor: Color.fromRGBO(187, 225, 250, 1)),
           child: MyDrawer()),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
         actions: <Widget>[
           Container(

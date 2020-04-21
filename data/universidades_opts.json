@@ -1,6 +1,11 @@
 {
-    "nombreApp": "Orienta-T",
+    "nombreApp": "Orienta2",
     "rutas": [
+        {
+            "ruta": "aptitudes",
+            "icon": "person",
+            "texto": "Aptitudes"
+        },
         {
             "ruta": "carreras",
             "icon": "school",

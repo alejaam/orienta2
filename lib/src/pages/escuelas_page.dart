@@ -1,11 +1,13 @@
+// import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/escuelas_page.dart';
+import 'package:orientat/src/pages/esfm_page.dart';
+import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
-import 'package:orientat/src/pages/unam_page.dart';
+import 'package:orientat/src/pages/upiicsa_page.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
 
-class SuperioresPage extends StatelessWidget {
-  const SuperioresPage({Key key}) : super(key: key);
+class EscuelasPage extends StatelessWidget {
+  const EscuelasPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,42 +53,97 @@ class SuperioresPage extends StatelessWidget {
         padding: EdgeInsets.all(20),
         children: <Widget>[
           _cardTipo2(
-              'https://www.encb.ipn.mx/assets/files/encb/img/escudos/logo-ipn.png',
-              'Instituto Politécnico Nacional',
+              'https://www.cics-sto.ipn.mx/assets/files/cics-sto/img/conocenos/udi/logoCICSSTf.png',
+              'CICS',
               context),
           SizedBox(height: 20.0),
           _cardTipo2(
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo-UNAM-escalable.svg/1200px-Escudo-UNAM-escalable.svg.png',
-              'Universidad Nacional Autónoma de México',
-              context),
-          SizedBox(height: 20.0),
-          _cardTipo2('http://www.uam.mx/identidad/emblemaylema/logogrande.gif',
-              'Universidad Autónoma Metropolitana', context),
-          SizedBox(height: 20.0),
-          _cardTipo2(
-              'https://universidadesdemexico.mx/logos/original/logo-uvm-universidad-del-valle-de-mexico.png',
-              'Unversidad del Valle de México',
+              'https://upload.wikimedia.org/wikipedia/commons/f/f6/Escudo_de_la_ENBA.png',
+              'ENBA',
               context),
           SizedBox(height: 20.0),
           _cardTipo2(
-              'https://i.pinimg.com/originals/f2/7d/8c/f27d8c1b680c3c2a9fe72377d79d00b1.jpg',
-              'Escuela Nacional para Maestras de Jardines de Niños',
+              'https://www.encb.ipn.mx/assets/files/encb/img/escudos/escudoENCB.png',
+              'ENCB',
               context),
           SizedBox(height: 20.0),
           _cardTipo2(
-              'https://seeklogo.com/images/U/UPN_-_Universidad_Pedag__gica_Nacional-logo-092C2CED63-seeklogo.com.png',
-              'Universidad Pedagógica Nacional',
+              'https://4.bp.blogspot.com/-fu9FgL4Attc/U2XMzLM-G0I/AAAAAAAALHc/rB5JBjC5ij8/s1600/LOGO_ENMH.jpg',
+              'ENMyH',
               context),
           SizedBox(height: 20.0),
           _cardTipo2(
-              'https://pbs.twimg.com/profile_images/837060980798554112/m38LPWQK.jpg',
-              'Escuela Nacional de Entrenadores Deportivos',
+              'https://www.ese.ipn.mx/assets/files/ese/img/Inicio/Escudo%20Banderin/Escudo-ese.jpg',
+              'ESE',
               context),
           SizedBox(height: 20.0),
           _cardTipo2(
-              'https://mextudia.com/wp-content/uploads/2018/08/Logo-Escuela-Superior-de-Educaci%C3%B3n-F%C3%ADsica.png',
-              'Escuela Superior de Educación Física',
-              context)
+              'https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png',
+              'ESFM',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.eseo.ipn.mx/assets/files/eseo/img/LOGO/BANDERINESEO.png',
+              'ESEO',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.escasto.ipn.mx/assets/files/esca-sto/img/ESCASTO-C.png',
+              'ESCA',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://pngimage.net/wp-content/uploads/2018/05/escom-png-1.png',
+              'ESCOM',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://pbs.twimg.com/profile_images/1423918272/esimetwitter_400x400.png',
+              'ESIME',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.esiqie.ipn.mx/assets/files/esiqie/img/Conocenos/Historia/ESIQIE.jpg',
+              'ESIQIE',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.esit.ipn.mx/assets/files/esit/uploads/ESIT.png',
+              'ESIT',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.esiatec.ipn.mx/assets/files/esiatec/img/conocenos/mision-vision/banderin-esia.png',
+              'ESIA',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.esm.ipn.mx/assets/files/esm/img/conocenos/misionvision/logoesm1.png',
+              'ESM',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.sepi.upibi.ipn.mx/assets/files/sepi-upibi/img/OTROS/BANDERIN.png',
+              'UPIBI',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.upiig.ipn.mx/assets/files/upiig/img/Iconos/LogoUPIIG.png',
+              'UPIIG',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.elimparcial.com/__export/1556969446111/sites/elimparcial/img/2016/02/12/1358479-N.JPG_423682103.jpg',
+              'UPIIZ',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2(
+              'https://www.upiicsa.ipn.mx/assets/files/upiicsa/Inicio/ICON-UPIICSA.png',
+              'UPIICSA',
+              context),
+          SizedBox(height: 20.0),
+          _cardTipo2('https://www.upiita.ipn.mx/images/upiita-logo.png',
+              'UPIITA', context)
         ],
       ),
     );
@@ -126,15 +183,15 @@ class SuperioresPage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         switch (school) {
-          case 'Instituto Politécnico Nacional':
+          case 'UPIICSA':
             final route = new MaterialPageRoute(builder: (context) {
-              return EscuelasPage();
+              return UpiicsaPage();
             });
             Navigator.push(context, route);
             break;
-          case 'Universidad Nacional Autónoma de México':
+          case 'ESFM':
             final route = new MaterialPageRoute(builder: (context) {
-              return UnamPage();
+              return EsfmPage();
             });
             Navigator.push(context, route);
             break;

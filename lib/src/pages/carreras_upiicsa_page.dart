@@ -1,11 +1,11 @@
 // import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class UbicacionPage extends StatelessWidget {
-  const UbicacionPage({Key key}) : super(key: key);
+class CarrerasUpiicsaPage extends StatelessWidget {
+  const CarrerasUpiicsaPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,45 +50,15 @@ class UbicacionPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(20),
         children: <Widget>[
-          _cardTipo2('Ingeniería Aeronáutica', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Ambiental', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Biomédica', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Biónica', context),
-          SizedBox(height: 20.0),
           _cardTipo2('Ingeniería en Informática', context),
           SizedBox(height: 20.0),
-          _cardTipo2(' Ingeniería en Metalurgia y Materiales', context),
+          _cardTipo2('Ingeniería en Transporte', context),
+          SizedBox(height: 20.0),
+          _cardTipo2('Ingeniería Industrial', context),
           SizedBox(height: 20.0),
           _cardTipo2('Licenciatura en Ciencias de la Informática', context),
           SizedBox(height: 20.0),
-          _cardTipo2('Licenciatura en Física y Matemáticas', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciado en Nutrición', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciado en Psicología', context),
-          _cardTipo2('Ingeniería Aeronáutica', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Ambiental', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Biomédica', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería Biónica', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Ingeniería en Informática', context),
-          SizedBox(height: 20.0),
-          _cardTipo2(' Ingeniería en Metalurgia y Materiales', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciatura en Ciencias de la Informática', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciatura en Física y Matemáticas', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciado en Nutrición', context),
-          SizedBox(height: 20.0),
-          _cardTipo2('Licenciado en Psicología', context),
-      
+          _cardTipo2('Licenciatura en Administración Industrial', context),
         ],
       ),
     );
@@ -114,10 +84,7 @@ class UbicacionPage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print("HOLA");
-        final route = new MaterialPageRoute(builder: (context) {
-          return IpnPage();
-        });
-        Navigator.push(context, route);
+        Navigator.pushNamed(context, 'aptitudes_informatica');
       },
       child: Container(
         decoration: BoxDecoration(
@@ -134,5 +101,13 @@ class UbicacionPage extends StatelessWidget {
             ClipRRect(borderRadius: BorderRadius.circular(30.0), child: card),
       ),
     );
+  }
+
+  _launchURL(url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

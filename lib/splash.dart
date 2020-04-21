@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
       seconds: 5,
       navigateAfterSeconds: LoginPage(),
       title: Text(
-        'Orienta-T',
+        'Orienta2',
         style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 50.0, color: Colors.white),
       ),

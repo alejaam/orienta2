@@ -1,6 +1,5 @@
 // import 'package:componentes/src/utils/icono_string_util.dart';
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -15,7 +14,7 @@ class CarrerasPage extends StatelessWidget {
       // bottomNavigationBar: _bottomNavigationBar(context),
       drawer: MyDrawer(),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
         actions: <Widget>[
           Container(

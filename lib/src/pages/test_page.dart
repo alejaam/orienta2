@@ -19,7 +19,7 @@ class _TestFacilState extends State<TestFacil> {
       child: Scaffold(
         backgroundColor: Color.fromRGBO(187, 225, 250, 1),
         appBar: AppBar(
-          title: Text("Orienta-T"),
+          title: Text("Orienta2"),
           backgroundColor: Color.fromRGBO(38, 93, 130, 1),
           actions: <Widget>[
             Container(
@@ -101,10 +101,9 @@ class _TestFacilState extends State<TestFacil> {
                         child: Icon(Icons.mood, size: 100.0),
                         onPressed: () {
                           setState(() {
-                            tf.respuestausuario = true;
+                            // tf.respuestausuario = true;
                             tf.validararea();
                             tf.nextQuestion(context);
-                            print('siguiente pregunta');
                           });
                         },
                       ),
