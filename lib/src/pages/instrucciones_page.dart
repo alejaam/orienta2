@@ -41,6 +41,40 @@ class _InstruccionesPageState extends State<InstruccionesPage> {
           ),
         ],
       ),
+      body: PageView(
+        controller:
+            PageController(initialPage: 1, viewportFraction: 2, keepPage: true),
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Container(
+            color: Colors.green,
+          ),
+          Container(
+            color: Colors.white,
+          ),
+          Container(
+            color: Colors.red,
+          ),
+          Scaffold(
+            body: Center(
+              child: Container(
+                height: 250,
+                width: 250,
+                color: Colors.indigoAccent,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Card(
+                      elevation: 20.0,
+                      child: Text("HOLA"),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

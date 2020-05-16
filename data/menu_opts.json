@@ -2,9 +2,9 @@
     "nombreApp": "Orienta-T",
     "rutas": [
         {
-            "ruta": "universidades",
+            "ruta": "instituciones",
             "icon": "school",
-            "texto": "Universidades"
+            "texto": "Instituciones"
         },
         {
             "ruta": "test",

@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
               child: InkWell(
                 onTap: () {
                   switch (opt['ruta']) {
-                    case 'universidades':
+                    case 'instituciones':
                       Navigator.pushNamed(context, opt['ruta']);
                       break;
                     case 'test':

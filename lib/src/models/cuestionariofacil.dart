@@ -315,7 +315,7 @@ class CuestionarioFacil {
         }
         break;
     }
-    print('====${_questionNumber}====');
+    print('====$_questionNumber====');
     print('Respuestas area 1: $area1');
     print('Respuestas area 2: $area2');
     print('Respuestas area 3: $area3');

@@ -1,22 +1,346 @@
 {
     "superiores": [
-        
         {
-            "id": 1,
-            "nombre": "UPIICSA",
             "institucion": "Instituto Politécnico Nacional",
-            "clave": "100215255",
-            "tipo": 2,
-            "Plantel" : "",
-            "carreras": [
-                "Administración Industrial",
-                "Ingenieria En Transporte",
-                "Ingenieria Industrial",
-                "Ingenieria Informática",
-                "Ciencias De La Informática",
-                "Automotriz"
-            ],
-            "realizarTest": false
+            "escudo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Logo_Instituto_Polit%C3%A9cnico_Nacional.png",
+            "escuelas": [
+                {
+                    "nombre": "Escuela Superior de Ingeniería Mecánica y Eléctrica Unidad Ticomán",
+                    "siglas": "ESIME - Ticomán",
+                    "escudo": "https://www.esimetic.ipn.mx/assets/files/esimetic/img/inicio/iconESCUDO.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.509469,
+                            "longitud": -99.133686
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Aeronáutica",
+                            "duracion": 8,
+                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/ingenieria-aeronautica.html"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "duracion": 8,
+                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/isisa.html"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Tecamachalco",
+                    "siglas": "ESIA - Tecamachalco",
+                    "escudo": "https://www.esiatec.ipn.mx/assets/files/esiatec/img/conocenos/mision-vision/banderin-esia.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.430028,
+                            "longitud": -99.231667
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniero Arquitecto",
+                            "duracion": 8,
+                            "plan": "https://www.esiatec.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-arquitecto.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Comercio y Administración Unidad Santo Tomás",
+                    "siglas": "ESCA - Santo Tomás",
+                    "escudo": "https://www.escasto.ipn.mx/assets/files/esca-sto/img/ESCASTO-C.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.454040,
+                            "longitud": -99.167980
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Contador Público",
+                            "duracion": 5,
+                            "plan": "https://www.escasto.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Plan-estudiosCP-sto.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración y Desarrollo Empresarial",
+                            "duracion": 5,
+                            "plan": "https://www.escasto.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/PlanestudiosLADE_STO.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 5,
+                            "plan": "https://www.escasto.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/PlanestudiosLNI_STO.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Comerciales",
+                            "duracion": 4,
+                            "plan": "https://www.escasto.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/PlanestudiosLRC_STO.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Zacatenco",
+                    "siglas": "ESIA - Zacatenco",
+                    "escudo": "https://www.esiaz.ipn.mx/assets/files/esiaz/assets/uploads/logo_esia_copia.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.504963,
+                            "longitud": -99.137052
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 5,
+                            "plan": "https://www.esiaz.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/MapaCurricular-IngCivil.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas",
+                    "siglas": "UPIITA",
+                    "escudo": "https://www.upiita.ipn.mx/images/upiita-logo.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.511659,
+                            "longitud": -99.126515
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 5,
+                            "plan": "https://www.upiita.ipn.mx/images/academica/planes/mecatronica/TRAYECTORIA%20IDEAL%20MECATRONICA.jpg"
+                        },
+                        {
+                            "carrera": "Ingeniería Biónica",
+                            "duracion": 5,
+                            "plan": "https://www.upiita.ipn.mx/images/academica/planes/bionica/trayectoria%20ideal%20de%20ingeniera%20bionica.jpg"
+                        },
+                        {
+                            "carrera": "Ingeniería Telemática",
+                            "duracion": 5,
+                            "plan": "https://www.upiita.ipn.mx/images/academica/planes/telematica/trayectoria%20ideal%20de%20telematica.jpg"
+                        },
+                        {
+                            "carrera": "Ingeniería en Energía",
+                            "duracion": 4.5,
+                            "plan": "https://www.upiita.ipn.mx/images/academica/planes/energia/TRAYECTORIA%20IDEAL%20ENERGIA.jpg"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Turismo",
+                    "siglas": "EST",
+                    "escudo": "https://www.est.ipn.mx/assets/files/est/img/escudo/est.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.515129,
+                            "longitud": -99.140762
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Turismo",
+                            "duracion": 5,
+                            "plan": "https://www.est.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/pgama-academico-est-turismo.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Universidad Nacional Autónoma de México",
+            "escudo": "https://arquitectura.unam.mx/uploads/8/1/1/0/8110907/_2634443.png",
+            "escuelas": [
+                {
+                    "nombre": "Universidad Nacional Autónoma de México",
+                    "siglas": "UNAM",
+                    "escudo": "https://www.unam.mx/sites/default/files/images/unam.svg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.331801,
+                            "longitud": -99.184732
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingcivilplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Computación",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingcomputacionplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Energías Renovables",
+                            "duracion": 8,
+                            "plan": "http://oferta.unam.mx/planestudios/ingenergiasrenovablesplanestudioscie13a.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingtelecomplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones, Sistemas y Electrónica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingtelecomsistemasyelectroplanestudioscuautitlan13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingindustrialplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecanicaplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica Eléctrica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecanicaplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecatronicaplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingquimicaplanestudiosfacquimica13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química-metalúrgica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingquimicametalurgiaplanestudiosfacquim13.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Universidad Autónoma Metropolitana",
+            "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
+            "escuelas": [
+                {
+                    "nombre": "Universidad Autónoma Metropolitana",
+                    "siglas": "UAM",
+                    "escudo": "https://www.unam.mx/sites/default/files/images/unam.svg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.331801,
+                            "longitud": -99.184732
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingcivilplanestudiosfacing13.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Sin Institución",
+            "escudo": "https://cdn.iconscout.com/icon/premium/png-512-thumb/image-unavailable-1691936-1440224.png",
+            "escuelas": [
+                {
+                    "nombre": "Escuela Libre de Derecho",
+                    "siglas": "ELD",
+                    "escudo": "https://www.eld.edu.mx/wp-content/themes/yootheme/cache/logo-AMARILLO-DUTCH-con-sombra-7fe17a1a.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.426455,
+                            "longitud": -99.146086
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 10,
+                            "plan": "https://www.eld.edu.mx/plan-de-estudios/"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad de las Americas",
+                    "siglas": "UDLA",
+                    "escudo": "https://www.udlacdmx.mx/ver3/images/logo.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.422263,
+                            "longitud": -99.166297
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/administacion-de-empresas#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comunicación",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comunicación Humana",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion-humana#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 8,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/psicologia#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 8,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/derecho#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 6,
+                            "plan": "hhttps://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/relaciones-internacionales#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Informática y Tecnologías de la Información",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/informatica-y-tecnologias-de-informacion#plan-de-estudios"
+                        }
+                    ]
+                }
+                {
+                    "nombre": "Centro de Estudio para la Cultura y las Artes",
+                    "siglas": "Casa LAMM",
+                    "escudo": "https://www.casalamm.com.mx/templates/yootheme/cache/logo_casalamm_ok-07a7a191.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.419012,
+                            "longitud": -99.159442
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Literatura y creación Literaria",
+                            "duracion": 9,
+                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-literatura-y-creacion-literaria"
+                        },
+                        {
+                            "carrera": "Licenciatura en Historia del Arte",
+                            "duracion": 9,
+                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-historia-del-arte"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
