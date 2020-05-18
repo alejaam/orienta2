@@ -156,7 +156,7 @@
                 {
                     "nombre": "Universidad Nacional Autónoma de México",
                     "siglas": "UNAM",
-                    "escudo": "https://www.unam.mx/sites/default/files/images/unam.svg",
+                    "escudo": "https://arquitectura.unam.mx/uploads/8/1/1/0/8110907/_2634443.png",
                     "ubicacion": [
                         {
                             "latitud": 19.331801,
@@ -230,7 +230,7 @@
                 {
                     "nombre": "Universidad Autónoma Metropolitana",
                     "siglas": "UAM",
-                    "escudo": "https://www.unam.mx/sites/default/files/images/unam.svg",
+                    "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
                     "ubicacion": [
                         {
                             "latitud": 19.331801,
@@ -254,7 +254,7 @@
                 {
                     "nombre": "Escuela Libre de Derecho",
                     "siglas": "ELD",
-                    "escudo": "https://www.eld.edu.mx/wp-content/themes/yootheme/cache/logo-AMARILLO-DUTCH-con-sombra-7fe17a1a.png",
+                    "escudo": "https://pbs.twimg.com/profile_images/983150457228025856/tmy0isEb_400x400.jpg",
                     "ubicacion": [
                         {
                             "latitud": 19.426455,
@@ -316,11 +316,11 @@
                             "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/informatica-y-tecnologias-de-informacion#plan-de-estudios"
                         }
                     ]
-                }
+                },
                 {
                     "nombre": "Centro de Estudio para la Cultura y las Artes",
-                    "siglas": "Casa LAMM",
-                    "escudo": "https://www.casalamm.com.mx/templates/yootheme/cache/logo_casalamm_ok-07a7a191.png",
+                    "siglas": "CASA LAMM",
+                    "escudo": "https://universidadesdemexico.mx/logos/original/logo-casa-lamm.png",
                     "ubicacion": [
                         {
                             "latitud": 19.419012,

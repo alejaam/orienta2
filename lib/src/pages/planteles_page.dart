@@ -61,12 +61,13 @@ class PlanetelesPage extends StatelessWidget {
     for (var institucion in escuelas) {
       final widgTemp = GestureDetector(
         onTap: () {
-          print(institucion["carreras"].runtimeType);
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>
-                  PlanetelPage(plantel: institucion["carreras"]),
+              builder: (context) => PlanetelPage(
+                plantel: institucion["carreras"],
+                ubicacion: institucion["ubicacion"],
+              ),
             ),
           );
         },

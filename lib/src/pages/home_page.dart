@@ -63,8 +63,12 @@ class _HomePageState extends State<HomePage> {
       future: menuProvider.cargarData("menu_opts.json"),
       initialData: [],
       builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
-        return GridView.count(
-            crossAxisCount: 2, children: _cardItems(snapshot.data, context));
+        if (snapshot.hasData) {
+          return GridView.count(
+              crossAxisCount: 2, children: _cardItems(snapshot.data, context));
+        }else{
+          return CircularProgressIndicator();
+        }
       },
     );
   }

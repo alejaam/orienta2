@@ -51,12 +51,17 @@ class InstitucionesPage extends StatelessWidget {
             future: superioresProvider.cargarData('superiores.json'),
             initialData: [],
             builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
-              return ListView(
-                padding: EdgeInsets.all(20),
-                children: _cardTipo2(snapshot.data, context),
-                //   _cardTipoTest(snapshot.data, context)
-              );
-            }));
+              if (snapshot.connectionState == ConnectionState.done) {
+                return ListView(
+                  padding: EdgeInsets.all(20),
+                  children: _cardTipo2(snapshot.data, context),
+                  // _cardTipoTest(snapshot.data, context)
+                );
+              } else {
+                return Center(child: CircularProgressIndicator());
+              }
+            })
+        );
   }
 
   List<Widget> _cardTipo2(data, context) {

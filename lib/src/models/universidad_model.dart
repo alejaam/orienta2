@@ -5,7 +5,7 @@ class Superiores {
 
   Superiores.fromJsonMap(List<dynamic> json) {
     if (json == null) return;
-    
+
     for (var item in json) {
       final superior = Superior.fromJsonMap(item);
       items.add(superior);
