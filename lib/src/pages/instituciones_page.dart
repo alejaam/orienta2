@@ -58,10 +58,12 @@ class InstitucionesPage extends StatelessWidget {
                   // _cardTipoTest(snapshot.data, context)
                 );
               } else {
-                return Center(child: CircularProgressIndicator());
+                return Center(
+                    child: CircularProgressIndicator(
+                  backgroundColor: Colors.white,
+                ));
               }
-            })
-        );
+            }));
   }
 
   List<Widget> _cardTipo2(data, context) {

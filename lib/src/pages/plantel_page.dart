@@ -6,14 +6,22 @@ import 'package:orientat/utils/icono_string_util.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:latlong/latlong.dart';
 
-class PlanetelPage extends StatelessWidget {
+class PlanetelPage extends StatefulWidget {
   // const PlanetelPage({Key key}) : super(key: key);
   final List<dynamic> plantel;
   final List<dynamic> ubicacion;
   PlanetelPage({Key key, @required this.plantel, @required this.ubicacion})
       : super(key: key);
+
+  @override
+  _PlanetelPageState createState() => _PlanetelPageState();
+}
+
+class _PlanetelPageState extends State<PlanetelPage> {
   final map = new MapController();
+
   String tipoMapa = 'streets';
+
   @override
   Widget build(BuildContext context) {
     // final Universidad universidad = ModalRoute.of(context).settings.arguments;
@@ -62,12 +70,12 @@ class PlanetelPage extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(10),
               height: _screenSize.height / 3,
-              child: SizedBox(height: 20, child: _crearFlutterMap(ubicacion)),
+              child: SizedBox(height: 20, child: _crearFlutterMap(widget.ubicacion)),
             ),
             Container(
               padding: EdgeInsets.all(10),
               height: _screenSize.height / 2,
-              child: ListView(children: _cardsPlantel(context, plantel)),
+              child: ListView(children: _cardsPlantel(context, widget.plantel)),
             )
           ],
         ));

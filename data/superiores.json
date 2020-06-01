@@ -5,43 +5,114 @@
             "escudo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Logo_Instituto_Polit%C3%A9cnico_Nacional.png",
             "escuelas": [
                 {
-                    "nombre": "Escuela Superior de Ingeniería Mecánica y Eléctrica Unidad Ticomán",
-                    "siglas": "ESIME - Ticomán",
-                    "escudo": "https://www.esimetic.ipn.mx/assets/files/esimetic/img/inicio/iconESCUDO.png",
+                    "nombre": "Centro Interdisciplinario de Ciencias de la Salud Unidad Milpa Alta",
+                    "siglas": "CICS - Milpa Alta",
+                    "escudo": "https://www.cicsma.ipn.mx/assets/files/cicsma/img/imagenes/mision/escudo-cicsuma.png",
                     "ubicacion": [
                         {
-                            "latitud": 19.509469,
-                            "longitud": -99.133686
+                            "latitud": 19.180941,
+                            "longitud": -99.029694
                         }
                     ],
                     "carreras": [
                         {
-                            "carrera": "Ingeniería Aeronáutica",
+                            "carrera": "Licenciado en Nutrición",
                             "duracion": 8,
-                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/ingenieria-aeronautica.html"
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/nutricion.pdf"
                         },
                         {
-                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "carrera": "Licenciado en Optometría",
                             "duracion": 8,
-                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/isisa.html"
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/cics-st-optometria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 8,
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/lic-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Odontología",
+                            "duracion": 8,
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/odontologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Trabajo Social",
+                            "duracion": 8,
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/lic-trabajo-social.pdf"
+                        },
+                        {
+                            "carrera": "Médico Cirujano Partero",
+                            "duracion": 10,
+                            "plan": "https://www.cicsma.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Cirujano-Partero.pdf"
                         }
                     ]
                 },
                 {
-                    "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Tecamachalco",
-                    "siglas": "ESIA - Tecamachalco",
-                    "escudo": "https://www.esiatec.ipn.mx/assets/files/esiatec/img/conocenos/mision-vision/banderin-esia.png",
+                    "nombre": "Escuela Nacional de Biblioteconomía y Archivonomía",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Escudo_de_la_ENBA.png/200px-Escudo_de_la_ENBA.png",
+                    "siglas": "ENBA",
                     "ubicacion": [
                         {
-                            "latitud": 19.430028,
-                            "longitud": -99.231667
+                            "latitud": 19.511062,
+                            "longitud": -99.133169
                         }
                     ],
                     "carreras": [
                         {
-                            "carrera": "Ingeniero Arquitecto",
-                            "duracion": 8,
-                            "plan": "https://www.esiatec.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-arquitecto.pdf"
+                            "carrera": "Licenciatura en Archivonomía",
+                            "duracion": 5,
+                            "plan": "https://www.enba.ipn.mx/assets/files/enba/docs/Oferta%20Educativa/Carreras/plan_%20licenciado_biblio.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Biblioteconomía",
+                            "duracion": 9,
+                            "plan": "https://www.enba.ipn.mx/assets/files/enba/docs/Oferta%20Educativa/Carreras/plan_%20licenciado_biblio.pdf "
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Nacional de Medicina y Homeopatía",
+                    "siglas": "ENMyH",
+                    "escudo": "https://bioquimicamedicablog.files.wordpress.com/2017/10/enmh-logo.png?w=320",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.512574,
+                            "longitud": -99.137894
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura Médico Cirujano y Homeópata",
+                            "duracion": 10,
+                            "plan": "https://www.enmh.ipn.mx/assets/files/enmh/docs/Oferta_Educativa/mcyh/mcyh.htm"
+                        },
+                        {
+                            "carrera": "Licenciatura Médico Cirujano y Partero ",
+                            "duracion": 10,
+                            "plan": "https://www.enmh.ipn.mx/assets/files/enmh/docs/Oferta_Educativa/mcyp/mcyp.htm"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ciencias Biológicas",
+                    "siglas": "ENCB",
+                    "escudo": "https://www.encb.ipn.mx/assets/files/encb/img/escudos/escudoENCB.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.5,
+                            "longitud": -99.1167
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Bioquímica",
+                            "duracion": 9,
+                            "plan": "https://www.encb.ipn.mx/assets/files/encb/docs/licenciatura/ingenieriaBioquimica/mapa-curricular-ibq-2019.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Ambientales",
+                            "duracion": 9,
+                            "plan": "https://www.encb.ipn.mx/assets/files/encb/docs/licenciatura/ingenieriaSistemasAmbientales/documentos/mapa-curricular-isa-2018.pdf"
                         }
                     ]
                 },
@@ -51,8 +122,8 @@
                     "escudo": "https://www.escasto.ipn.mx/assets/files/esca-sto/img/ESCASTO-C.png",
                     "ubicacion": [
                         {
-                            "latitud": 19.454040,
-                            "longitud": -99.167980
+                            "latitud": 19.45404,
+                            "longitud": -99.16798
                         }
                     ],
                     "carreras": [
@@ -79,9 +150,269 @@
                     ]
                 },
                 {
+                    "nombre": "Escuela Superior de Cómputo",
+                    "siglas": "ESCOM",
+                    "escudo": "https://www.escom.ipn.mx/images/logoESCOM.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.504557,
+                            "longitud": -99.146894
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 8,
+                            "plan": "https://www.escom.ipn.mx/htmls/oferta/mapaCurrISC2020.php"
+                        },
+                        {
+                            "carrera": "Ingeniería en Inteligencia Artificial",
+                            "duracion": 8,
+                            "plan": "https://www.escom.ipn.mx/docs/oferta/mapaCurricularIIA2020.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencia de Datos",
+                            "duracion": 8,
+                            "plan": "https://www.escom.ipn.mx/docs/oferta/mapaCurricularLCD2020.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "duracion": 8,
+                            "plan": "https://www.escom.ipn.mx/docs/oferta/mapaCurricularISISA2009.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Economía",
+                    "siglas": "ESE",
+                    "escudo": "https://www.ese.ipn.mx/assets/files/ese/img/Inicio/Escudo%20Banderin/Escudo-ese.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.454314,
+                            "longitud": -99.168191
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 9,
+                            "plan": "https://www.ese.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ESE-2011-Lic-Economia.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Enfermería y Obstetricia",
+                    "escudo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQoFq9GXGwRxWKDzQnOJX0tJv_nWPwj-hnXt-EfHPzmCg5OmXv&usqp=CAU",
+                    "siglas": "ESEO",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.453508,
+                            "longitud": -99.170529
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 8,
+                            "plan": "https://www.eseo.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/lic-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería y Obstetricia",
+                            "duracion": 8,
+                            "plan": "https://www.eseo.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/lic-enfermeria-obstetricia.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Física y Matemáticas",
+                    "siglas": "ESFM",
+                    "escudo": "https://www.esfm.ipn.mx/assets/files/esfm/img/ESCUDO_ESFM.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.502281,
+                            "longitud": -99.133911
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Matemática",
+                            "duracion": 8,
+                            "plan": "https://www.esfm.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-matematicas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Física y Matemáticas",
+                            "duracion": 8,
+                            "plan": "https://www.esfm.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ESFM-1994-Licenciatura-en-F%C3%ADsica-y-Matem%C3%A1ticas.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería Mecánica y Eléctrica Unidad Azcapotzalco",
+                    "siglas": "ESIME - Azcapotzalco",
+                    "escudo": "https://pbs.twimg.com/profile_images/1425649101/esimetwitter_400x400.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.4893,
+                            "longitud": -99.175
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Robótica Industrial",
+                            "duracion": 9,
+                            "plan": "https://www.esimeazc.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-robotica-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "duracion": 9,
+                            "plan": "https://www.esimeazc.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-sistemas-automotrices.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 9,
+                            "plan": "https://www.esimeazc.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-mecanica.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería Mecánica y Eléctrica Unidad Culhuacán",
+                    "siglas": "ESIME - Culhuacan",
+                    "escudo": "https://pbs.twimg.com/profile_images/1425649101/esimetwitter_400x400.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.31882,
+                            "longitud": -99.0392
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Computación",
+                            "duracion": 8,
+                            "plan": "https://www.esimecu.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ESIME-CULH-P-2003-Ingenier%C3%ADa-en-Computaci%C3%B3n.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Comunicaciones y Electrónica",
+                            "duracion": 9,
+                            "plan": "https://www.esimecu.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-comunicaciones-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "duracion": 9,
+                            "plan": "https://www.esimecu.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-sistemas-automotrices.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 9,
+                            "plan": "https://www.esimecu.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-mecanica.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería Mecánica y Eléctrica Unidad Ticomán",
+                    "siglas": "ESIME - Ticomán",
+                    "escudo": "https://www.esimetic.ipn.mx/assets/files/esimetic/img/inicio/iconESCUDO.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.509469,
+                            "longitud": -99.133686
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Aeronáutica",
+                            "duracion": 8,
+                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/ingenieria-aeronautica.html"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Automotrices",
+                            "duracion": 8,
+                            "plan": "https://www.esimetic.ipn.mx/oferta-educativa/isisa.html"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería Química e Industrias Extractivas",
+                    "siglas": "ESIQIE",
+                    "escudo": "https://www.esiqie.ipn.mx/assets/files/esiqie/img/Inicio/logoesiqie.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.501363,
+                            "longitud": -99.134689
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Metalurgia y Materiales",
+                            "duracion": 9,
+                            "plan": "https://www.esiqie.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Plan_IMM_2010.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química Industrial",
+                            "duracion": 9,
+                            "plan": "https://www.esiqie.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Plan_IQI_2010.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química Petrolera",
+                            "duracion": 9,
+                            "plan": "https://www.esiqie.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Plan_IQP_2010.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Tecamachalco",
+                    "siglas": "ESIA - Tecamachalco",
+                    "escudo": "https://www.esiatec.ipn.mx/assets/files/esiatec/img/conocenos/mision-vision/banderin-esia.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.430028,
+                            "longitud": -99.231667
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniero Arquitecto",
+                            "duracion": 8,
+                            "plan": "https://www.esiatec.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-arquitecto.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Ticoman",
+                    "siglas": "ESIA - Ticomán",
+                    "escudo": "https://www.esiatic.ipn.mx/assets/files/sepi-esiatic/img/Inicio/banderin-esia.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.5,
+                            "longitud": -99.1167
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Geofísica",
+                            "duracion": 8,
+                            "plan": "https://www.esiatic.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ESIA-TIC-P-2009-Ingenier%C3%ADa-Geof%C3%ADsica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Geológica",
+                            "duracion": 8,
+                            "plan": "https://www.esiatic.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-geologica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Petrolera",
+                            "duracion": 8,
+                            "plan": "https://www.esiatic.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-petrolera.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Topográfica y Fotogramétrica",
+                            "duracion": 8,
+                            "plan": "https://www.esiatic.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-topografia.pdf"
+                        }
+                    ]
+                },
+                {
                     "nombre": "Escuela Superior de Ingeniería y Arquitectura Unidad Zacatenco",
                     "siglas": "ESIA - Zacatenco",
-                    "escudo": "https://www.esiaz.ipn.mx/assets/files/esiaz/assets/uploads/logo_esia_copia.png",
+                    "escudo": "https://www.esiatic.ipn.mx/assets/files/sepi-esiatic/img/Inicio/banderin-esia.png",
                     "ubicacion": [
                         {
                             "latitud": 19.504963,
@@ -93,6 +424,118 @@
                             "carrera": "Ingeniería Civil",
                             "duracion": 5,
                             "plan": "https://www.esiaz.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/MapaCurricular-IngCivil.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Medicina",
+                    "siglas": "ESM",
+                    "escudo": "https://www.esm.ipn.mx/assets/files/esm/img/conocenos/misionvision/logoesm1.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.4514573,
+                            "longitud": -99.1676601
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Medico Cirujano Partero",
+                            "duracion": 9,
+                            "plan": "https://www.esm.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ESM-Cirujano-Partero.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Turismo",
+                    "siglas": "EST",
+                    "escudo": "https://www.est.ipn.mx/assets/files/est/img/escudo/est.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.515129,
+                            "longitud": -99.140762
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Turismo",
+                            "duracion": 5,
+                            "plan": "https://www.est.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/pgama-academico-est-turismo.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Unidad Profesional Interdisciplinaria de Biotecnología",
+                    "siglas": "UPIBI",
+                    "escudo": "https://www.sepi.upibi.ipn.mx/assets/files/sepi-upibi/img/OTROS/BANDERIN.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.515888,
+                            "longitud": -99.12677
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental",
+                            "duracion": 8,
+                            "plan": "https://www.upibi.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIBI-P-2006-Ingenier%C3%ADa-Ambiental.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Biomédica",
+                            "duracion": 8,
+                            "plan": "https://www.upibi.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/Ing-Biomedica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Biotecnológica",
+                            "duracion": 8,
+                            "plan": "https://www.upibi.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIBI-P-2006-Ingenier%C3%ADa-Biotecnol%C3%B3gica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Alimentos",
+                            "duracion": 8,
+                            "plan": "https://www.upibi.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/ing-alimentos.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Farmacéutica",
+                            "duracion": 8,
+                            "plan": "https://www.upibi.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIBI-P-2006-Ingenier%C3%ADa-Farmac%C3%A9utica.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas",
+                    "siglas": "UPIICSA",
+                    "escudo": "https://seeklogo.com/images/U/upiicsa-logo-048DBE854F-seeklogo.com.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.395929,
+                            "longitud": -99.091664
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Informática",
+                            "duracion": 8,
+                            "plan": "https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Ingenier%C3%ADa-en-Inform%C3%A1tica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Transporte",
+                            "duracion": 8,
+                            "plan": "https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Ingenier%C3%ADa-en-Transporte.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial",
+                            "duracion": 8,
+                            "plan": "https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Ingenier%C3%ADa-Industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Informática",
+                            "duracion": 8,
+                            "plan": "https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Licenciatura-en-Ciencias-de-la-Inform%C3%A1tica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración Industrial",
+                            "duracion": 8,
+                            "plan": "https://www.upiicsa.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/UPIICSA-P-2010-Licenciatura-en-Administraci%C3%B3n-Industrial.pdf"
                         }
                     ]
                 },
@@ -128,22 +571,713 @@
                             "plan": "https://www.upiita.ipn.mx/images/academica/planes/energia/TRAYECTORIA%20IDEAL%20ENERGIA.jpg"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "institucion": "Instituto Tecnológico Autónomo de México",
+            "escudo": "https://bazar.itam.mx/img/2017/logo-ITAM-verde.png",
+            "escuelas": [
                 {
-                    "nombre": "Escuela Superior de Turismo",
-                    "siglas": "EST",
-                    "escudo": "https://www.est.ipn.mx/assets/files/est/img/escudo/est.png",
+                    "nombre": "Instituto Tecnológico Autónomo de México",
+                    "siglas": "ITAM",
+                    "escudo": "https://bazar.itam.mx/img/2017/logo-ITAM-verde.png",
                     "ubicacion": [
                         {
-                            "latitud": 19.515129,
-                            "longitud": -99.140762
+                            "latitud": 19.344347,
+                            "longitud": -99.199738
                         }
                     ],
                     "carreras": [
                         {
-                            "carrera": "Licenciatura en Turismo",
-                            "duracion": 5,
-                            "plan": "https://www.est.ipn.mx/assets/files/ofertaEducativa/mapa-curricular/superior/escolarizado/pgama-academico-est-turismo.pdf"
+                            "carrera": "Actuaria",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=17aTfFW8Em9jbHq1-MlLEhuV-LXslSvE8"
+                        },
+                        {
+                            "carrera": "Ciencia política",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1-nwn6QOEmcsrV3TJXGliQw9f4fsodchf"
+                        },
+                        {
+                            "carrera": "Contaduría Pública y Estrategia Financiera",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=15BANIEVi2Z-CKW4CIMu0QUrdNxTb-g6F"
+                        },
+                        {
+                            "carrera": "Derecho",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=16tpBSXwBp9xW5uw6hZPnBUnsVIS2Ot62"
+                        },
+                        {
+                            "carrera": "Ingeniería en Computación",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1xepBPG8hyWwTkWwvr7XK90V0Dueosux7"
+                        },
+                        {
+                            "carrera": "Ingeniería en Negocios",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1giLrh-624U_YGCZg4L38_cXQYUuWyqqD"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración ",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1BkpcPi5rsnHoyTLuI3P8y-nHoz_cilX2"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencia de Datos",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1U-EW-INqRATlG3AKooXPmU9OhKrY4a4z"
+                        },
+                        {
+                            "carrera": "Licenciatura en Dirección Financiera",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1re9TSvJFu_844yw5Vh9Ss3DDbNFH7-da"
+                        },
+                        {
+                            "carrera": "Licenciatura en Economía del ITAM",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1_XQPC37ZbaS2egd4ZEtkmZBy3TcaQuxT"
+                        },
+                        {
+                            "carrera": "Matemáticas Aplicadas ",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1y0YPeO9PmUvGEDEkDdH5e13tYHpzdHHs"
+                        },
+                        {
+                            "carrera": "Relaciones internacionales",
+                            "duracion": 8,
+                            "plan": "https://drive.google.com/open?id=1iS6YFTAplgD7dTc_X9d6dpQf8Q9RmCmf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Sin Institución",
+            "escudo": "https://cdn.iconscout.com/icon/premium/png-512-thumb/image-unavailable-1691936-1440224.png",
+            "escuelas": [
+                {
+                    "nombre": "Escuela Libre de Derecho",
+                    "siglas": "ELD",
+                    "escudo": "https://pbs.twimg.com/profile_images/983150457228025856/tmy0isEb_400x400.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.426455,
+                            "longitud": -99.146086
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 10,
+                            "plan": "https://www.eld.edu.mx/plan-de-estudios/"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Pontificia de México",
+                    "siglas": "UPN",
+                    "escudo": "https://universidadesdemexico.mx/logos/original/logo-universidad-pontificia-de-mexico.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.2880556,
+                            "longitud": -99.16916666666667
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 8,
+                            "plan": "https://www.pontificia.edu.mx/wp-content/uploads/2020/01/Programa-Derecho-1024x951.jpghttps://www.pontificia.edu.mx/wp-content/uploads/2020/01/Programa-Derecho-1024x951.jpg"
+                        },
+                        {
+                            "carrera": "Licenciatura en Filosofía",
+                            "duracion": 6,
+                            "plan": "http://www.pontificia.edu.mx/1er-ciclo-bachillerato-2/"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Colegio Libre de Estudios Universitarios",
+                    "siglas": "CLEU",
+                    "escudo": "https://3.bp.blogspot.com/-I0fvVWzU-XU/UMYjZNa2BpI/AAAAAAAAAIs/JZi-oBoF708/s1600/escudoblack.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.340096,
+                            "longitud": -99.142895
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Criminología y Criminalística",
+                            "duracion": 9,
+                            "plan": "http://www.cleu.edu.mx/Campus/CampusDF/licenciaturas.html"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho con Enfoque en Ciencias Penales",
+                            "duracion": 9,
+                            "plan": "http://www.cleu.edu.mx/Campus/CampusDF/licenciaturas.html"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Justo Sierra – Ticoman",
+                    "siglas": "UJS - Ticomán",
+                    "escudo": "https://seeklogo.com/images/J/justo_sierra-logo-5B3E186232-seeklogo.com.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.511551,
+                            "longitud": -99.124634
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Médico Cirujano",
+                            "duracion": 10,
+                            "plan": "https://www.universidad-justosierra.edu.mx/licenciaturas/medico-cirujano-ticoman/#1487596796925-637e0a36-dabc52c1-540f"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad de las Americas",
+                    "siglas": "UDLA",
+                    "escudo": "https://www.udlacdmx.mx/ver3/images/logo.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.422263,
+                            "longitud": -99.166297
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/administacion-de-empresas#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comunicación",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comunicación Humana",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion-humana#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 8,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/derecho#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Informática y Tecnologías de la Información",
+                            "duracion": 6,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/informatica-y-tecnologias-de-informacion#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 8,
+                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/psicologia#plan-de-estudios"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 6,
+                            "plan": "hhttps://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/relaciones-internacionales#plan-de-estudios"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Centro de Estudio para la Cultura y las Artes",
+                    "siglas": "CASA LAMM",
+                    "escudo": "https://universidadesdemexico.mx/logos/original/logo-casa-lamm.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.419012,
+                            "longitud": -99.159442
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Historia del Arte",
+                            "duracion": 9,
+                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-historia-del-arte"
+                        },
+                        {
+                            "carrera": "Licenciatura en Literatura y creación Literaria",
+                            "duracion": 9,
+                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-literatura-y-creacion-literaria"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Bancaria y Comercial",
+                    "siglas": "EBC - CDMX",
+                    "escudo": "https://www.amei.mx/wp-content/uploads/2016/08/EBC.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.428416,
+                            "longitud": -99.158935
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Administración de Negocios de Comunicación y Entretenimiento",
+                            "duracion": 8,
+                            "plan": "https://www.ebc.mx/licenciaturas/administracion-de-negocios-de-comunicacion-y-entretenimiento/lance-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Administración de Negocios de Turismo y Hospitalidad",
+                            "duracion": 8,
+                            "plan": "https://www.ebc.mx/licenciaturas/administracion-de-negocios-de-turismo-y-hospitalidad/turismo-hospitalidad-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración",
+                            "duracion": 8,
+                            "plan": "https://www.ebc.mx/licenciaturas/administracion/administracion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio y Negocios Internacionales",
+                            "duracion": 8,
+                            "plan": "https://www.ebc.mx/licenciaturas/comercio-y-negocios-internacionales/comercio-negocios-internacionales-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 9,
+                            "plan": "https://www.ebc.mx/licenciaturas/contaduria-publica/contaduria-publica-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 9,
+                            "plan": "https://www.ebc.mx/licenciaturas/derecho/derecho-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Finanzas y Banca",
+                            "duracion": 9,
+                            "plan": "https://www.ebc.mx/licenciaturas/finanzas-y-banca/finanzas-banca-ebc.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 9,
+                            "plan": "https://www.ebc.mx/licenciaturas/mercadotecnia/mercadotecnia-ebc.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Anáhuac México",
+                    "siglas": "UAM",
+                    "escudo": "https://www.carrerasenlinea.mx/logos/thumb/logo-universidad-anahuac-mexico-sur.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.406102795664367,
+                            "longitud": -99.2602308996187
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería en Sistemas y Tecnología de la información",
+                            "duracion": 9,
+                            "plan": "https://www.anahuac.mx/mexico/2020/Lic/PlanEstudios/Ingenieria_Sistemas.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Intercontinental",
+                    "siglas": "UIC",
+                    "escudo": "https://enlinea.uic.edu.mx/images/uic/logo.svg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.280749,
+                            "longitud": -99.171504
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Administración de Negocios Turísticos",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/AdministracionNegociosTuristicosUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración y Dirección Estratégica",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/AdministracionDireccionEstrategicaUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 9,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/ArquitecturaUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comunicación Digital",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/ComunicacionDigitalUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría y Finanzas",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/ContaduriaFinanzasUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/DerechoUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/DisenoGraficoUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Filosofía",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2020/05/FlyerHumanidades_FilosofiaUIC2020LR.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Medicina y Cirugía Odontológica",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/07/MedicinaCirugiaOdontologica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/MercadotecniaUIC-1.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/NutricionUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía e Innovación Educativa",
+                            "duracion": 6,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2020/02/Flyer_PedagogiaeinnovacioneducativaSUR-DESCARGA.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/PsicologiaUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Comerciales Internacionales",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/RelacionesComercialesInternacionalesUIC.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Teología",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2020/05/FlyerHumanidades_TeologiaUIC2020LR.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Traducción, localización e interpretación",
+                            "duracion": 8,
+                            "plan": "https://www.uic.mx/licenciaturas/files/2018/08/TraduccionLocalizacionInterpretacionUIC.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Latinoamericana",
+                    "siglas": "ULA",
+                    "escudo": "https://seeklogo.com/images/U/Universidad_Latinoamericana-logo-4AA2881CD6-seeklogo.com.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.37274334872778,
+                            "longitud": -99.1671872504561
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Arquitectura",
+                            "duracion": 8,
+                            "plan": "https://www.ula.edu.mx/PDFs/Tradicionales/Licenciaturas/HC_Tradicional_Arquitectura_ULA.pdf"
+                        },
+                        {
+                            "carrera": "Diseño de aminacion",
+                            "duracion": 8,
+                            "plan": "https://www.ula.edu.mx/PDFs/Tradicionales/Licenciaturas/HC_Tradicional_Dise%C3%B1o_de_Animacion_ULA.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Pedagogica Nacional",
+                    "siglas": "UPN",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Logo_Upn_Oficial.svg/1200px-Logo_Upn_Oficial.svg.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.302120083108264,
+                            "longitud": -99.21027089621481
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Administracion educativa",
+                            "duracion": 8,
+                            "plan": "https://www.upn.mx/index.php/estudiar-en-la-upn/licenciaturas/18-estudiar-en-la-upn/91-administracion-educativa"
+                        },
+                        {
+                            "carrera": "Pedagogia",
+                            "duracion": 8,
+                            "plan": "https://www.upn.mx/index.php/estudiar-en-la-upn/licenciaturas/18-estudiar-en-la-upn/93-pedagogia"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Comercial Cámara de Comericio",
+                    "escudo": "https://www.eccc.mx/hs-fs/hubfs/ECCC%20LOGO_Mesa%20de%20trabajo%201-2.png?width=450&name=ECCC%20LOGO_Mesa%20de%20trabajo%201-2.png",
+                    "siglas": "ECCC",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.413306,
+                            "longitud": -99.158974
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración Hotelera y Turística",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contador Público",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "plan": "https://www.eccc.mx/planes-de-estudio-licenciatura"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Colegio de México",
+                    "escudo": "https://libros.colmex.mx/wp-content/uploads/2017/07/L1.jpg",
+                    "siglas": "COLMEX",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.303753,
+                            "longitud": -99.207529
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 8,
+                            "plan": "https://cee.colmex.mx/lic-en-economia/materias"
+                        },
+                        {
+                            "carrera": "Licenciatura en Política y Administración Pública",
+                            "duracion": 9,
+                            "plan": ": https://cei.colmex.mx/politica-administracion-publica"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 9,
+                            "plan": "https://cei.colmex.mx/relaciones-internacionales"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Educación Física",
+                    "escudo": "https://mextudia.com/wp-content/uploads/2018/08/Logo-Escuela-Superior-de-Educaci%C3%B3n-F%C3%ADsica.png",
+                    "siglas": "ESEF",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.407782,
+                            "longitud": -99.100493
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Educación Física",
+                            "duracion": 8,
+                            "plan": "https://estudiantes-esef.wixsite.com/esef/plan-de-estudios"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Escuela Superior de Rehabilitación",
+                    "escudo": "https://lh3.googleusercontent.com/proxy/IU97xFZW9hja1MXNlxBIvLrJeHpeaWKBTgpBzl8Q9wNAvmAQY4TtPZn-Pm9YwPld3oS8Y_p5zWq9uiSPTsiFT8FuKw",
+                    "siglas": "INR",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.28776,
+                            "longitud": -99.149242
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Terapia en Comunicación Humana",
+                            "plan": "https://www.inr.gob.mx/Descargas/Ensena/RETICULA-TCH.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Terapia Física",
+                            "plan": "https://www.inr.gob.mx/Descargas/Ensena/RETICULA-TF.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Terapia Ocupacional",
+                            "plan": "https://www.inr.gob.mx/Descargas/Ensena/RETICULA-TO.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad de Desarrollo Empresarial y Pedagogico",
+                    "siglas": "UNIVDEP",
+                    "escudo": "https://www.univdep.edu.mx/img/univdep_1.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.37458008994129,
+                            "longitud": -99.16314477872494
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en diseño",
+                            "duracion": 9,
+                            "plan": "https://www.univdep.edu.mx/img/Planes/Plan_de_Estudios_Diseno_creatividad_visual.jpg"
+                        },
+                        {
+                            "carrera": "Licenciatura en informática administrativa",
+                            "duracion": 9,
+                            "plan": "https://www.univdep.edu.mx/img/Planes/Plan_de_Estudios_Informatica_Administrativa.jpg"
+                        },
+                        {
+                            "carrera": "Ingeniería en sistemas",
+                            "duracion": 9,
+                            "plan": "https://www.univdep.edu.mx/img/Planes/Plan_de_Estudios_Ingenieria_sistemas_computacionales.jpg"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Universidad Superior de Gastronomía",
+                    "siglas": "SG",
+                    "escudo": "https://sg.edu.mx/wp-content/uploads/2020/01/2logo.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.41296,
+                            "longitud": -99.167903
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 6,
+                            "plan": "https://sg.edu.mx/wp-content/uploads/2020/04/Licenciatura-en-Gastronom%C3%ADa-SG-1.pdf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Universidad Autónoma de la Ciudad de México",
+            "escudo": "https://1.bp.blogspot.com/-JSjvJiPqVOg/UraQE616LHI/AAAAAAAAAOA/wDjrNXeJRxw/s1600/escudobronce2.png",
+            "escuelas": [
+                {
+                    "nombre": "Universidad Autónoma de la Ciudad de México",
+                    "escudo": "https://1.bp.blogspot.com/-JSjvJiPqVOg/UraQE616LHI/AAAAAAAAAOA/wDjrNXeJRxw/s1600/escudobronce2.png",
+                    "siglas": "UACM",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.416325,
+                            "longitud": -99.151913
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ing. en Sistemas de Transporte Urbano",
+                            "duracion": 10,
+                            "plan": "https://www.uacm.edu.mx/Oferta-academica/CCyT/Sistemas_de_Transporte_Urbano"
+                        },
+                        {
+                            "carrera": "Ing. en Sistemas Electrónicos Industriales",
+                            "duracion": 10,
+                            "plan": "https://www.uacm.edu.mx/Oferta-academica/CCyT/SistemasElectronicosIndustriales"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ing. en sistemas electrónicos y de telecomunicaciones",
+                            "duracion": 10,
+                            "plan": "https://www.uacm.edu.mx/OfertaAcademica/CCyT/SistemasElectronicosydeTelecomunicaciones"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ing. en Sistemas Energéticos",
+                            "duracion": 10,
+                            "plan": "https://www.uacm.edu.mx/OfertaAcademica/CCyT/SistemasEnergeticos"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ing. en Software",
+                            "duracion": 10,
+                            "plan": "https://www.uacm.edu.mx/OfertaAcademica/CCyT/IngEnSoftware"
+                        },
+                        {
+                            "carrera": "Licenciatura en Modelación Matemática",
+                            "duracion": 9,
+                            "plan": "https://www.uacm.edu.mx/OfertaAcademica/CCyT/ModelacionMatematica"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "institucion": "Universidad Autónoma Metropolitana",
+            "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
+            "escuelas": [
+                {
+                    "nombre": "Universidad Autónoma Metropolitana",
+                    "siglas": "UAM",
+                    "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.331801,
+                            "longitud": -99.184732
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingcivilplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Electrónica",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/9_14_Lic_en_Ingenieria_Electronica_AZC.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Computación",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/122_8_Lic_en_Ingenieria_en_Computacion_AZC.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Física",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/4_15_Lic_en_Ingenieria_Fisica_AZC.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/5_13_Lic_en_Ingenieria_Industrial_AZC.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/6_13_Lic_en_Ingenieria_Mecanica_AZC.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "http://www.uam.mx/licenciaturas/pdfs/8_11_Lic_en_Ingenieria_Quimica_AZC.pdf"
                         }
                     ]
                 }
@@ -175,6 +1309,16 @@
                             "plan": "http://oferta.unam.mx/planestudios/ingcomputacionplanestudiosfacing13.pdf"
                         },
                         {
+                            "carrera": "Ingeniería en Computación",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingcomputacionplanestudiosfacing13.pdf "
+                        },
+                        {
+                            "carrera": "Ingeniería en Energías Renovables",
+                            "duracion": 8,
+                            "plan": "http://oferta.unam.mx/planestudios/ingenergiasrenovablesplanestudioscie13a.pdf"
+                        },
+                        {
                             "carrera": "Ingeniería en Energías Renovables",
                             "duracion": 8,
                             "plan": "http://oferta.unam.mx/planestudios/ingenergiasrenovablesplanestudioscie13a.pdf"
@@ -183,6 +1327,16 @@
                             "carrera": "Ingeniería en Telecomunicaciones",
                             "duracion": 9,
                             "plan": "http://oferta.unam.mx/planestudios/ingtelecomplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones",
+                            "duracion": 8,
+                            "plan": "http://oferta.unam.mx/planestudios/ingtelecomplanestudiosfacing13.pdf "
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones, Sistemas y Electrónica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingtelecomsistemasyelectroplanestudioscuautitlan13.pdf"
                         },
                         {
                             "carrera": "Ingeniería en Telecomunicaciones, Sistemas y Electrónica",
@@ -195,9 +1349,19 @@
                             "plan": "http://oferta.unam.mx/planestudios/ingindustrialplanestudiosfacing13.pdf"
                         },
                         {
+                            "carrera": "Ingeniería Industrial",
+                            "duracion": 8,
+                            "plan": "http://oferta.unam.mx/planestudios/ingindustrialplanestudiosfacing13.pdf "
+                        },
+                        {
                             "carrera": "Ingeniería Mecánica",
                             "duracion": 9,
                             "plan": "http://oferta.unam.mx/planestudios/ingmecanicaplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecanicaplanestudiosfacing13.pdf "
                         },
                         {
                             "carrera": "Ingeniería Mecánica Eléctrica",
@@ -205,14 +1369,34 @@
                             "plan": "http://oferta.unam.mx/planestudios/ingmecanicaplanestudiosfacing13.pdf"
                         },
                         {
+                            "carrera": "Ingeniería Mecánica Eléctrica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecelectricaplanestudioscuautitlan13a.pdf"
+                        },
+                        {
                             "carrera": "Ingeniería Mecatrónica",
                             "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingmecatronicaplanestudiosfacing13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 10,
                             "plan": "http://oferta.unam.mx/planestudios/ingmecatronicaplanestudiosfacing13.pdf"
                         },
                         {
                             "carrera": "Ingeniería Química",
                             "duracion": 9,
                             "plan": "http://oferta.unam.mx/planestudios/ingquimicaplanestudiosfacquimica13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingquimicaplanestudiosfacquimica13.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química-metalúrgica",
+                            "duracion": 9,
+                            "plan": "http://oferta.unam.mx/planestudios/ingquimicametalurgiaplanestudiosfacquim13.pdf"
                         },
                         {
                             "carrera": "Ingeniería Química-metalúrgica",
@@ -224,119 +1408,1716 @@
             ]
         },
         {
-            "institucion": "Universidad Autónoma Metropolitana",
-            "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
+            "institucion": "Universidad Tecnológica de México",
+            "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
             "escuelas": [
                 {
-                    "nombre": "Universidad Autónoma Metropolitana",
-                    "siglas": "UAM",
-                    "escudo": "http://www.uam.mx/identidad/emblemaylema/logomediano.png",
+                    "nombre": "Campus Atizapan",
+                    "siglas": "UNITEC Atizapan",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
                     "ubicacion": [
                         {
-                            "latitud": 19.331801,
-                            "longitud": -99.184732
+                            "latitud": 19.546166,
+                            "longitud": -99.240303
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Gestión de Negocios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-gestion-de-negocios.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Digitales y Robótica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-digitales-y-robotica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones y Electrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-telecomunicaciones-y-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas de Entretenimiento y Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas-de-entretenimiento-y-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-economia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Publicidad y Medios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-publicidad-y-medios.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-relaciones-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Cuitláhuac",
+                    "siglas": "UNITEC Cuitláhuac",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.459692,
+                            "longitud": -99.174901
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Gestión de Negocios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-gestion-de-negocios.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Digitales y Robótica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-digitales-y-robotica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones y Electrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-telecomunicaciones-y-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas de Entretenimiento y Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas-de-entretenimiento-y-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Digital y Animación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-digital-y-animacion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico y Comunicación Visual",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico-y-comunicacion-visual.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-economia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Publicidad y Medios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-publicidad-y-medios.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-relaciones-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Ecatepec",
+                    "siglas": "UNITEC Ecatepec",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.556984,
+                            "longitud": -99.021417
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Gestión de Negocios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-gestion-de-negocios.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Digitales y Robótica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-digitales-y-robotica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones y Electrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-telecomunicaciones-y-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas de Entretenimiento y Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas-de-entretenimiento-y-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño de Modas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-de-modas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-economia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Publicidad y Medios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-publicidad-y-medios.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-relaciones-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Guadalajara",
+                    "siglas": "UNITEC Guadalajara",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 20.62827,
+                            "longitud": -103.300118
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Digitales y Robótica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-digitales-y-robotica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño de Modas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-de-modas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia Digital y Publicidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia-digital-y-publicidad.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus León",
+                    "siglas": "UNITEC León",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 21.1486,
+                            "longitud": -101.652461
                         }
                     ],
                     "carreras": [
                         {
                             "carrera": "Ingeniería Civil",
-                            "duracion": 9,
-                            "plan": "http://oferta.unam.mx/planestudios/ingcivilplanestudiosfacing13.pdf"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "institucion": "Sin Institución",
-            "escudo": "https://cdn.iconscout.com/icon/premium/png-512-thumb/image-unavailable-1691936-1440224.png",
-            "escuelas": [
-                {
-                    "nombre": "Escuela Libre de Derecho",
-                    "siglas": "ELD",
-                    "escudo": "https://pbs.twimg.com/profile_images/983150457228025856/tmy0isEb_400x400.jpg",
-                    "ubicacion": [
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
                         {
-                            "latitud": 19.426455,
-                            "longitud": -99.146086
-                        }
-                    ],
-                    "carreras": [
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
                         {
-                            "carrera": "Licenciatura en Derecho",
-                            "duracion": 10,
-                            "plan": "https://www.eld.edu.mx/plan-de-estudios/"
-                        }
-                    ]
-                },
-                {
-                    "nombre": "Universidad de las Americas",
-                    "siglas": "UDLA",
-                    "escudo": "https://www.udlacdmx.mx/ver3/images/logo.png",
-                    "ubicacion": [
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
                         {
-                            "latitud": 19.422263,
-                            "longitud": -99.166297
-                        }
-                    ],
-                    "carreras": [
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
                         {
                             "carrera": "Licenciatura en Administración de Empresas",
-                            "duracion": 6,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/administacion-de-empresas#plan-de-estudios"
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
                         },
                         {
-                            "carrera": "Licenciatura en Comunicación",
-                            "duracion": 6,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion#plan-de-estudios"
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
                         },
                         {
-                            "carrera": "Licenciatura en Comunicación Humana",
-                            "duracion": 6,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/comunicacion-humana#plan-de-estudios"
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia Digital y Publicidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia-digital-y-publicidad.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
                         },
                         {
                             "carrera": "Licenciatura en Psicología",
-                            "duracion": 8,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/psicologia#plan-de-estudios"
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
                         },
                         {
-                            "carrera": "Licenciatura en Derecho",
-                            "duracion": 8,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/derecho#plan-de-estudios"
-                        },
-                        {
-                            "carrera": "Licenciatura en Relaciones Internacionales",
-                            "duracion": 6,
-                            "plan": "hhttps://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/relaciones-internacionales#plan-de-estudios"
-                        },
-                        {
-                            "carrera": "Licenciatura en Informática y Tecnologías de la Información",
-                            "duracion": 6,
-                            "plan": "https://www.udlacdmx.mx/ver3/index.php/blog-3/licenciaturas/informatica-y-tecnologias-de-informacion#plan-de-estudios"
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
                         }
                     ]
                 },
                 {
-                    "nombre": "Centro de Estudio para la Cultura y las Artes",
-                    "siglas": "CASA LAMM",
-                    "escudo": "https://universidadesdemexico.mx/logos/original/logo-casa-lamm.png",
+                    "nombre": "Campus Los Reyes",
+                    "siglas": "UNITEC Los Reyes",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
                     "ubicacion": [
                         {
-                            "latitud": 19.419012,
-                            "longitud": -99.159442
+                            "latitud": 19.359017,
+                            "longitud": -98.993074
                         }
                     ],
                     "carreras": [
                         {
-                            "carrera": "Licenciatura en Literatura y creación Literaria",
-                            "duracion": 9,
-                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-literatura-y-creacion-literaria"
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
                         },
                         {
-                            "carrera": "Licenciatura en Historia del Arte",
-                            "duracion": 9,
-                            "plan": "https://www.casalamm.com.mx/index.php/oferta-educativa/licenciaturas/licenciatura-en-historia-del-arte"
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Gestión de Negocios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-gestion-de-negocios.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Digitales y Robótica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-digitales-y-robotica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones y Electrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-telecomunicaciones-y-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas de Entretenimiento y Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas-de-entretenimiento-y-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Publicidad y Medios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-publicidad-y-medios.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Marina",
+                    "siglas": "UNITEC Marina",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.447483,
+                            "longitud": -99.181187
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Licenciatura en Cirujano Dentista",
+                            "duracion": 8,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cirujano-dentista.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Querétaro",
+                    "siglas": "UNITEC Querétaro",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 20.61041,
+                            "longitud": -100.417657
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración Financiera",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-financiera.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia Digital y Publicidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia-digital-y-publicidad.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-relaciones-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Sur",
+                    "siglas": "UNITEC Sur CDMX",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.357015,
+                            "longitud": -99.117803
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Ambiental y Sustentabilidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-ambiental-y-sustentabilidad.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Gestión de Negocios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-gestion-de-negocios.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Telecomunicaciones y Electrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-telecomunicaciones-y-electronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas de Entretenimiento y Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas-de-entretenimiento-y-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública y Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica-y-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Cultura Física y Deportes",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-cultura-fisica-y-deportes.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño de Modas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-de-modas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Digital y Animación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-digital-y-animacion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico y Comunicación Visual",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico-y-comunicacion-visual.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Economía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-economia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Finanzas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-finanzas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Publicidad y Medios",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-publicidad-y-medios.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Relaciones Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-relaciones-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
+                        }
+                    ]
+                },
+                {
+                    "nombre": "Campus Toluca",
+                    "siglas": "UNITEC Toluca",
+                    "escudo": "https://upload.wikimedia.org/wikipedia/commons/6/60/UNITEC_logo.jpg",
+                    "ubicacion": [
+                        {
+                            "latitud": 19.289683,
+                            "longitud": -99.613521
+                        }
+                    ],
+                    "carreras": [
+                        {
+                            "carrera": "Ingeniería Civil",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-civil.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería en Sistemas Computacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-en-sistemas-computacionales.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y Administración",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-administracion-ejecutiva-enlinea.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Industrial y de Sistemas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-industrial-y-de-sistemas.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecánica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecanica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Mecatrónica",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-mecatronica.pdf"
+                        },
+                        {
+                            "carrera": "Ingeniería Química",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/ingenieria-quimica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Empresas",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-empresas.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración de Tecnologías de la Información",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-de-tecnologias-de-informacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Administración Financiera",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-administracion-financiera.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Arquitectura",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-arquitectura.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Ciencias de la Comunicación",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-ciencias-de-la-comunicacion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Comercio Internacional",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-comercio-internacional.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Contaduría Pública",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-contaduria-publica.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Criminología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-criminologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Derecho",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-derecho.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Gráfico",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-grafico.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño Industrial",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-industrial.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Diseño, Animación y Arte Digital",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-diseno-animacion-y-arte-digital.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Enfermería",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-enfermeria.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Fisioterapía",
+                            "duracion": 13,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-fisioterapia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Gastronomía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-gastronomia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Lenguas Extranjeras",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-lenguas-extranjeras.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Mercadotecnia Digital y Publicidad",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-mercadotecnia-digital-y-publicidad.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Negocios Internacionales",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-negocios-internacionales.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Nutrición",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-nutricion.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Pedagogía",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-pedagogia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura en Psicología",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-en-psicologia.pdf"
+                        },
+                        {
+                            "carrera": "Licenciatura Internacional en Turismo y Reuniones",
+                            "duracion": 12,
+                            "plan": "https://www.unitec.mx/folleto/licenciatura-internacional-en-turismo-y-reuniones.pdf"
                         }
                     ]
                 }
