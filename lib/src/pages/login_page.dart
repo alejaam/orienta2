@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:orientat/src/bloc/login_bloc.dart';
+import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/pages/home_page.dart';
+import 'package:orientat/src/providers/usuario_provider.dart';
+import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
@@ -9,6 +13,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final usuarioProvider = new UsuarioProvider();
+
   bool _rememberMe = false;
   bool checkUser;
   bool checkPassword;
@@ -17,81 +23,142 @@ class _LoginPageState extends State<LoginPage> {
   String password = "";
   String msg = "*Error en usuario o contraseña";
 
-  Widget _buildEmailTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Correo/Nombre de usuario',
-          style: kLabelStyle,
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'OpenSans',
+  @override
+  Widget build(BuildContext context) {
+    final bloc = Provider.of(context);
+
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(69, 142, 190, 1),
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Stack(
+            children: <Widget>[
+              Container(
+                height: double.infinity,
+                width: double.infinity,
               ),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 9.0),
-                prefixIcon: Icon(
-                  Icons.email,
-                  color: Colors.grey,
+              Container(
+                height: double.infinity,
+                child: SingleChildScrollView(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 40.0,
+                    vertical: 120.0,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Iniciar Sesión',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'OpenSans',
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      _buildEmailTF(bloc),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      _buildPasswordTF(bloc),
+                      _buildForgotPasswordBtn(),
+                      _buildRememberMeCheckbox(),
+                      _buildLoginBtn(context, bloc),
+                      _buildSignInWithText(),
+                      _buildSocialBtnRow(),
+                      _buildSignupBtn(bloc),
+                    ],
+                  ),
                 ),
-                hintText: 'Introduce tu correo o nombre de usuario',
-                hintStyle: kHintTextStyle,
-              ),
-              onChanged: (valor) {
-                setState(() {
-                  user = valor;
-                });
-              }),
+              )
+            ],
+          ),
         ),
-      ],
+      ),
     );
   }
 
-  Widget _buildPasswordTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Contraseña',
-          style: kLabelStyle,
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-              obscureText: true,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'OpenSans',
-              ),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 9.0),
-                prefixIcon: Icon(
-                  Icons.lock,
-                  color: Colors.grey,
-                ),
-                hintText: 'Introduce tu contraseña',
-                hintStyle: kHintTextStyle,
-              ),
-              onChanged: (valor) {
-                setState(() {
-                  password = valor;
-                });
-              }),
-        ),
-      ],
+  Widget _buildEmailTF(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.emailStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Correo/Nombre de usuario',
+              style: kLabelStyle,
+            ),
+            SizedBox(height: 10.0),
+            Container(
+              alignment: Alignment.centerLeft,
+              decoration: kBoxDecorationStyle,
+              height: 60.0,
+              child: TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'OpenSans',
+                  ),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(top: 9.0),
+                    prefixIcon: Icon(
+                      Icons.email,
+                      color: Colors.grey,
+                    ),
+                    hintText: 'Introduce tu correo o nombre de usuario',
+                    hintStyle: kHintTextStyle,
+                  ),
+                  onChanged: bloc.chageEmail),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildPasswordTF(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.passwordStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Contraseña',
+              style: kLabelStyle,
+            ),
+            SizedBox(height: 10.0),
+            Container(
+              alignment: Alignment.centerLeft,
+              decoration: kBoxDecorationStyle,
+              height: 60.0,
+              child: TextField(
+                  obscureText: true,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'OpenSans',
+                  ),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(top: 9.0),
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      color: Colors.grey,
+                    ),
+                    hintText: 'Introduce tu contraseña',
+                    hintStyle: kHintTextStyle,
+                  ),
+                  onChanged: bloc.changePassword),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -136,7 +203,8 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildLoginBtn() {
+  Widget _buildLoginBtn(BuildContext context, LoginBloc bloc) {
+    // final bloc = Provider.of(context);
     return Container(
       child: Column(
         children: <Widget>[
@@ -145,7 +213,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Visibility(
               visible: error, //Default is true,
               child: Text(msg, style: kLabelStyleWrong),
-              ),
+            ),
           ),
           Container(
             padding: EdgeInsets.symmetric(vertical: 25.0),
@@ -153,13 +221,7 @@ class _LoginPageState extends State<LoginPage> {
             child: RaisedButton(
               elevation: 5.0,
               onPressed: () {
-                if (user == "ale_jaam" && password == "admin") {
-                  login();
-                } else {
-                  setState(() {
-                    error = true;
-                  });
-                }
+                _login(bloc, context);
               },
               padding: EdgeInsets.all(15.0),
               shape: RoundedRectangleBorder(
@@ -249,101 +311,36 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildSignupBtn() {
-    return GestureDetector(
-      onTap: () => print('Sign Up Button Pressed'),
-      child: RichText(
-        text: TextSpan(
-          children: [
-            TextSpan(
-              text: '¿No estás registrado?',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            TextSpan(
-              text: ' Regístrate',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(69, 142, 190, 1),
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
-            children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: double.infinity,
-                // decoration: BoxDecoration(
-                //   gradient: LinearGradient(
-                //     begin: Alignment.topCenter,
-                //     end: Alignment.bottomCenter,
-                //     colors: [
-                //       Color.fromRGBO(27, 38, 44, 1),
-                //       Color.fromRGBO(15, 76, 117, 1),
-                //       Color.fromRGBO(69, 142, 190, 1),
-                //       Color.fromRGBO(193, 227, 250, 1),
-                //     ],
-                //     stops: [0.1, 0.4, 0.7, 0.9],
-                //   ),
-                // ),
-              ),
-              Container(
-                height: double.infinity,
-                child: SingleChildScrollView(
-                  physics: AlwaysScrollableScrollPhysics(),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 40.0,
-                    vertical: 120.0,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Iniciar Sesión',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'OpenSans',
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 30.0),
-                      _buildEmailTF(),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      _buildPasswordTF(),
-                      _buildForgotPasswordBtn(),
-                      _buildRememberMeCheckbox(),
-                      _buildLoginBtn(),
-                      _buildSignInWithText(),
-                      _buildSocialBtnRow(),
-                      _buildSignupBtn(),
-                    ],
+  Widget _buildSignupBtn(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return GestureDetector(
+          onTap: () => print('Sign Up Button Pressed'),
+          child: RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: '¿No estás registrado?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
-              )
-            ],
+                TextSpan(
+                  text: ' Regístrate',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 
@@ -352,5 +349,14 @@ class _LoginPageState extends State<LoginPage> {
       return HomePage();
     });
     Navigator.of(context).pushReplacement(route);
+  }
+
+  _login(LoginBloc bloc, BuildContext context) async {
+    Map info = await usuarioProvider.login(bloc.email, bloc.password);
+    if (info['ok']) {
+      Navigator.pushReplacementNamed(context, 'home');
+    } else {
+      mostrarAlerta(context, 'Correo y/o Contraseña incorrecta');
+    }
   }
 }
