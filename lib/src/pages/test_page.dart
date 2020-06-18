@@ -9,8 +9,6 @@ class TestFacil extends StatefulWidget {
 }
 
 class _TestFacilState extends State<TestFacil> {
-  List<Widget> scoreKeeper = [];
-
   @override
   Widget build(BuildContext context) {
     final _screenSize = MediaQuery.of(context).size;
@@ -46,89 +44,76 @@ class _TestFacilState extends State<TestFacil> {
         body: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-              height: _screenSize.height / 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: _screenSize.height / 4,
-                    width: _screenSize.height / 2,
-                    child: Card(
-                      color: Color.fromRGBO(69, 142, 190, 1),
-                      elevation: 10.0,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.all(10.0),
-                                  child: Center(
-                                    child: Text(
-                                      tf.getQuestionText(),
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 25.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ]),
-                    ),
-                  ),
-                ],
+            Expanded(
+              child: Container(
+                // height: _screenSize.height / 2,
+                width: _screenSize.height / 2,
+                child: Card(
+                  color: Color.fromRGBO(69, 142, 190, 1),
+                  elevation: 10.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          tf.getQuestionText(),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 25.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ]),
+                ),
               ),
             ),
-            Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    SizedBox(
-                      width: _screenSize.height / 5.5,
-                      height: _screenSize.height / 5.5,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0)),
-                        textColor: Colors.white,
-                        color: Colors.green,
-                        child: Icon(Icons.mood, size: 100.0),
-                        onPressed: () {
-                          setState(() {
-                            tf.respuestausuario = true;
-                            tf.validararea();
-                            tf.nextQuestion(context);
-                            print('siguiente pregunta');
-                          });
-                        },
-                      ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Ink(
+                    decoration: ShapeDecoration(
+                      color: Colors.red,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14.0)),
                     ),
-                    SizedBox(
-                      width: _screenSize.height / 5.5,
-                      height: _screenSize.height / 5.5,
-                      child: FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0)),
-                        color: Colors.red,
-                        child: Icon(Icons.mood_bad,
-                            size: 100.0, color: Colors.white),
-                        onPressed: () {
-                          setState(() {
-                            tf.respuestausuario = false;
-                            tf.nextQuestion(context);
-                          });
-                        },
-                      ),
+                    child: IconButton(
+                      iconSize: 90,
+                      icon: Icon(Icons.mood_bad),
+                      color: Colors.white,
+                      onPressed: () {
+                        setState(() {
+                          tf.respuestausuario = false;
+                          // tf.validararea();
+                          tf.nextQuestion(context);
+                          print('siguiente pregunta');
+                        });
+                      },
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  Ink(
+                    decoration: ShapeDecoration(
+                      color: Colors.green,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14.0)),
+                    ),
+                    child: IconButton(
+                      iconSize: 90,
+                      icon: Icon(Icons.mood),
+                      color: Colors.white,
+                      onPressed: () {
+                        setState(() {
+                          tf.respuestausuario = true;
+                          tf.validararea();
+                          tf.nextQuestion(context);
+                          print('siguiente pregunta');
+                        });
+                      },
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),

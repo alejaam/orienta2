@@ -19,7 +19,6 @@ class PlanetelPage extends StatefulWidget {
 
 class _PlanetelPageState extends State<PlanetelPage> {
   final map = new MapController();
-
   String tipoMapa = 'streets';
 
   @override
@@ -70,7 +69,8 @@ class _PlanetelPageState extends State<PlanetelPage> {
             Container(
               padding: EdgeInsets.all(10),
               height: _screenSize.height / 3,
-              child: SizedBox(height: 20, child: _crearFlutterMap(widget.ubicacion)),
+              child: SizedBox(
+                  height: 20, child: _crearFlutterMap(widget.ubicacion)),
             ),
             Container(
               padding: EdgeInsets.all(10),

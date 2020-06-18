@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: const EdgeInsets.all(20.0),
         child: _buildCards(),
       ),
     );
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
         if (snapshot.hasData) {
           return GridView.count(
               crossAxisCount: 2, children: _cardItems(snapshot.data, context));
-        }else{
+        } else {
           return CircularProgressIndicator();
         }
       },
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
         onTap: () {},
         child: Container(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(5.0),
             child: Card(
               color: Color.fromRGBO(69, 142, 190, 1),
               elevation: 10.0,
@@ -97,6 +97,8 @@ class _HomePageState extends State<HomePage> {
                       break;
                     case 'test':
                       _mostrarAlerta(context);
+                      break;
+                    case 'convocatorias':
                       break;
                     default:
                       Navigator.pushNamed(context, opt['ruta']);
@@ -142,30 +144,33 @@ class _HomePageState extends State<HomePage> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)),
             title: Text("Instrucciones"),
-            content: Column(
-              mainAxisSize:
-                  MainAxisSize.min, //El contenido interno dice el tamaño
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                      "1. A continuación ta haremos una serie de 80 preguntas y enunciados(Bastante rápidas)"),
-                ),
-                ListTile(
-                  title: Text(
-                      "2. Contestala con toda sinceridad para obtener un resultado más preciso"),
-                ),
-                ListTile(
-                  title: Text(
-                      "3. Las respuestas solo son 2: Me agrada o me desagrada"),
-                ),
-                ListTile(
-                  title: Text("4. No podrás salir del test hasta finalizar"),
-                ),
-              ],
+            contentPadding: EdgeInsets.all(5),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize:
+                    MainAxisSize.min, //El contenido interno dice el tamaño
+                children: <Widget>[
+                  ListTile(
+                    title: Text(
+                        "A continuación te haremos una serie de 80 preguntas y enunciados(Bastante rápidas)"),
+                  ),
+                  ListTile(
+                    title: Text(
+                        "1. Contestala con toda sinceridad para obtener un resultado más preciso"),
+                  ),
+                  ListTile(
+                    title: Text(
+                        "2. Las respuestas solo son 2, Me agrada o me desagrada"),
+                  ),
+                  ListTile(
+                    title: Text("3. No podrás salir del test hasta finalizar"),
+                  ),
+                ],
+              ),
             ),
             actions: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FlatButton(
                     child: Text("Cancelar"),
@@ -174,6 +179,9 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   FlatButton(
+                    color: Color.fromRGBO(69, 142, 190, 1),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
                     child: Text("Aceptar"),
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, 'test');

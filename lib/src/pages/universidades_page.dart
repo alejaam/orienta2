@@ -7,10 +7,8 @@ import 'package:orientat/src/widgets/drawer_widget.dart';
 class UniversidadesPage extends StatelessWidget {
   const UniversidadesPage({Key key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: Color.fromRGBO(187, 225, 250, 1),
         // bottomNavigationBar: _bottomNavigationBar(context),
@@ -108,7 +106,8 @@ class UniversidadesPage extends StatelessWidget {
                           ),
                           Container(
                             child: Text(
-                              institucion['institucion'], style: TextStyle(fontWeight: FontWeight.bold),
+                              institucion['institucion'],
+                              style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           )
                         ],

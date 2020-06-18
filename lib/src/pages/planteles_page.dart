@@ -91,24 +91,24 @@ class PlanetelesPage extends StatelessWidget {
                       padding: EdgeInsets.all(5.0),
                       child: Row(
                         children: <Widget>[
-                          Flexible(
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              padding: EdgeInsets.only(left: 15.0),
-                              child: FadeInImage(
-                                image: NetworkImage(institucion['escudo']),
-                                placeholder: AssetImage("assets/loading.gif"),
-                                fadeInDuration: Duration(milliseconds: 200),
-                                height: 100.0,
-                                fit: BoxFit.contain,
-                              ),
+                          Container(
+                            width: 100,
+                            height: 100,
+                            padding: EdgeInsets.only(left: 15.0),
+                            child: FadeInImage(
+                              image: NetworkImage(institucion['escudo']),
+                              placeholder: AssetImage("assets/loading.gif"),
+                              fadeInDuration: Duration(milliseconds: 200),
+                              height: 100.0,
+                              fit: BoxFit.contain,
                             ),
                           ),
-                          Container(
-                            child: Text(
-                              institucion["siglas"],
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                          Flexible(
+                            child: Container(
+                              child: Text(
+                                institucion["siglas"],
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ),
                           )
                         ],
