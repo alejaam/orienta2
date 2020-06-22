@@ -7,21 +7,23 @@ import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
 
-class LoginPage extends StatefulWidget {
+class RegistroPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegistroPageState createState() => _RegistroPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegistroPageState extends State<RegistroPage> {
   final usuarioProvider = new UsuarioProvider();
 
   bool _rememberMe = false;
   bool checkUser;
   bool checkPassword;
   bool error = false;
+  bool _obscureText = true;
   String user = "";
   String password = "";
   String msg = "*Error en usuario o contraseña";
+  Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Iniciar Sesión',
+                        'Registro',
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'OpenSans',
@@ -61,13 +63,10 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(bloc),
-                      // SizedBox(
-                      //   height: 30.0,
-                      // ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
                       _buildPasswordTF(bloc),
-                      _buildForgotPasswordBtn(),
-                      _buildRememberMeCheckbox(),
-                      _buildLoginBtn(context, bloc),
                       _buildSignUpBtn(context, bloc)
                       // _buildSignInWithText(),
                       // _buildSocialBtnRow(),
@@ -97,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
             // SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changeEmail,
-              obscureText: true,
+              obscureText: false,
               cursorColor: Colors.white,
               style: TextStyle(
                 color: Colors.white,
@@ -116,15 +115,14 @@ class _LoginPageState extends State<LoginPage> {
                   borderSide: BorderSide(color: Colors.white),
                 ),
                 labelText: "Correo",
+                errorText: snapshot.error,
                 prefixIcon: Icon(
                   Icons.email,
                   size: 18,
                   color: Colors.white,
                 ),
                 suffixIcon: GestureDetector(
-                  onTap: () {
-                    // model.isVisible = !model.isVisible;
-                  },
+                  onTap: () {},
                   child: Icon(
                     Icons.alternate_email,
                     size: 18,
@@ -153,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changePassword,
-              obscureText: true,
+              obscureText: _obscureText,
               cursorColor: Colors.white,
               style: TextStyle(
                 color: Colors.white,
@@ -172,21 +170,25 @@ class _LoginPageState extends State<LoginPage> {
                   borderSide: BorderSide(color: Colors.white),
                 ),
                 labelText: "Contraseña",
+                errorText: snapshot.error,
                 prefixIcon: Icon(
                   Icons.lock,
                   size: 18,
                   color: Colors.white,
                 ),
                 suffixIcon: GestureDetector(
-                  onTap: () {
-                    // model.isVisible = !model.isVisible;
-                  },
-                  child: Icon(
-                    Icons.visibility,
-                    size: 18,
-                    color: Colors.white,
-                  ),
-                ),
+                    onTap: () {
+                      // model.isVisible = !model.isVisible;
+                      setState(() {
+                        _obscureText = !_obscureText;
+                        _iconPass = (_obscureText)
+                            ? Icon(Icons.visibility,
+                                size: 18, color: Colors.white)
+                            : Icon(Icons.visibility_off,
+                                size: 18, color: Colors.white);
+                      });
+                    },
+                    child: _iconPass),
               ),
             ),
           ],
@@ -195,129 +197,56 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildForgotPasswordBtn() {
-    return Container(
-      alignment: Alignment.center,
-      child: FlatButton(
-        onPressed: () => print('Forgot Password Button Pressed'),
-        padding: EdgeInsets.only(right: 0.0),
-        child: Text(
-          '¿Olvidaste tu contraseña?',
-          style: kLabelStyle,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildRememberMeCheckbox() {
-    return Container(
-      height: 20.0,
-      child: Row(
-        children: <Widget>[
-          Theme(
-            data: ThemeData(unselectedWidgetColor: Colors.white),
-            child: Checkbox(
-              value: _rememberMe,
-              checkColor: Colors.green,
-              activeColor: Colors.white,
-              onChanged: (value) {
-                setState(() {
-                  _rememberMe = value;
-                });
-              },
-            ),
-          ),
-          Text(
-            'Recuérdame',
-            style: kLabelStyle,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildLoginBtn(BuildContext context, LoginBloc bloc) {
-    // final bloc = Provider.of(context);
-    return Container(
-      child: Column(
-        children: <Widget>[
-          // Container(
-          //   padding: EdgeInsets.only(top: 25.0),
-          //   child: Visibility(
-          //     visible: error, //Default is true,
-          //     child: Text(msg, style: kLabelStyleWrong),
-          //   ),
-          // ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 25.0),
-            width: double.infinity,
-            child: RaisedButton(
-              elevation: 5.0,
-              onPressed: () {
-                _login(bloc, context);
-              },
-              padding: EdgeInsets.all(15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.white,
-              child: Text(
-                'INICIAR SESIÓN',
-                style: TextStyle(
-                  color: Color(0xFF527DAA),
-                  letterSpacing: 1.5,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'OpenSans',
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildSignUpBtn(BuildContext context, LoginBloc bloc) {
     // final bloc = Provider.of(context);
-    return Container(
-      child: Column(
-        children: <Widget>[
-          // Container(
-          //   padding: EdgeInsets.only(top: 25.0),
-          //   child: Visibility(
-          //     visible: error, //Default is true,
-          //     child: Text(msg, style: kLabelStyleWrong),
-          //   ),
-          // ),
-          Container(
-            // padding: EdgeInsets.symmetric(vertical: 25.0),
-            width: double.infinity,
-            child: RaisedButton(
-              elevation: 5.0,
-              onPressed: () {
-                Navigator.pushNamed(context, 'registro');
-              },
-              padding: EdgeInsets.all(15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.white,
-              child: Text(
-                'REGISTRARSE',
-                style: TextStyle(
-                  color: Color(0xFF527DAA),
-                  letterSpacing: 1.5,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'OpenSans',
+
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
+          child: Column(
+            children: <Widget>[
+              // Container(
+              //   padding: EdgeInsets.only(top: 25.0),
+              //   child: Visibility(
+              //     visible: error, //Default is true,
+              //     child: Text(msg, style: kLabelStyleWrong),
+              //   ),
+              // ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 25.0),
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 5.0,
+                  onPressed:
+                      snapshot.hasData ? () => _register(bloc, context) : null,
+                  padding: EdgeInsets.all(15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.white,
+                  child: Text(
+                    'REGISTRARSE',
+                    style: TextStyle(
+                      color: Color(0xFF527DAA),
+                      letterSpacing: 1.5,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
+  }
+
+  _register(LoginBloc bloc, BuildContext context) {
+    usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
+    Navigator.pushReplacementNamed(context, 'home');
   }
 
   Widget _buildSignInWithText() {

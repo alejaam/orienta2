@@ -10,6 +10,7 @@ import 'package:orientat/src/pages/noticias_page.dart';
 import 'package:orientat/src/pages/planEstudios_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/pages/instituciones_page.dart';
+import 'package:orientat/src/pages/registro_page.dart';
 import 'package:orientat/src/pages/test_page.dart';
 import 'package:orientat/src/pages/universidades_page.dart';
 import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (BuildContext context) => Splash(),
+          'registro': (BuildContext context) => RegistroPage(),
           'instituciones': (BuildContext context) => InstitucionesPage(),
           'instrucciones': (BuildContext context) => InstruccionesPage(),
           'universidades': (BuildContext context) => UniversidadesPage(),

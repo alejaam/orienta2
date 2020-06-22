@@ -18,7 +18,7 @@ class LoginBloc with Validators {
       CombineLatestStream.combine2(emailStream, passwordStream, (e, p) => true);
 
   //Insertar valores al Stream
-  Function(String) get chageEmail => _emailController.sink.add;
+  Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;
 
   //obtener el útimo valor ingresado a los Streams
