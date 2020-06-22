@@ -96,8 +96,8 @@ class _LoginPageState extends State<LoginPage> {
             // ),
             // SizedBox(height: 10.0),
             TextField(
+              obscureText: false,
               onChanged: bloc.changeEmail,
-              obscureText: true,
               cursorColor: Colors.white,
               style: TextStyle(
                 color: Colors.white,
@@ -107,6 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelStyle: TextStyle(color: Colors.white),
                 focusColor: Colors.white,
                 filled: true,
+                errorText: snapshot.error,
                 enabledBorder: UnderlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide.none,
@@ -163,6 +164,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelStyle: TextStyle(color: Colors.white),
                 focusColor: Colors.white,
                 filled: true,
+                errorText: snapshot.error,
                 enabledBorder: UnderlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide.none,
@@ -238,85 +240,94 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildLoginBtn(BuildContext context, LoginBloc bloc) {
     // final bloc = Provider.of(context);
-    return Container(
-      child: Column(
-        children: <Widget>[
-          // Container(
-          //   padding: EdgeInsets.only(top: 25.0),
-          //   child: Visibility(
-          //     visible: error, //Default is true,
-          //     child: Text(msg, style: kLabelStyleWrong),
-          //   ),
-          // ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 25.0),
-            width: double.infinity,
-            child: RaisedButton(
-              elevation: 5.0,
-              onPressed: () {
-                _login(bloc, context);
-              },
-              padding: EdgeInsets.all(15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.white,
-              child: Text(
-                'INICIAR SESIÓN',
-                style: TextStyle(
-                  color: Color(0xFF527DAA),
-                  letterSpacing: 1.5,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'OpenSans',
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
+          child: Column(
+            children: <Widget>[
+              // Container(
+              //   padding: EdgeInsets.only(top: 25.0),
+              //   child: Visibility(
+              //     visible: error, //Default is true,
+              //     child: Text(msg, style: kLabelStyleWrong),
+              //   ),
+              // ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 25.0),
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 5.0,
+                  onPressed:
+                      snapshot.hasData ? () => _login(bloc, context) : null,
+                  padding: EdgeInsets.all(15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.white,
+                  child: Text(
+                    'INICIAR SESIÓN',
+                    style: TextStyle(
+                      color: Color(0xFF527DAA),
+                      letterSpacing: 1.5,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 
   Widget _buildSignUpBtn(BuildContext context, LoginBloc bloc) {
     // final bloc = Provider.of(context);
-    return Container(
-      child: Column(
-        children: <Widget>[
-          // Container(
-          //   padding: EdgeInsets.only(top: 25.0),
-          //   child: Visibility(
-          //     visible: error, //Default is true,
-          //     child: Text(msg, style: kLabelStyleWrong),
-          //   ),
-          // ),
-          Container(
-            // padding: EdgeInsets.symmetric(vertical: 25.0),
-            width: double.infinity,
-            child: RaisedButton(
-              elevation: 5.0,
-              onPressed: () {
-                Navigator.pushNamed(context, 'registro');
-              },
-              padding: EdgeInsets.all(15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.white,
-              child: Text(
-                'REGISTRARSE',
-                style: TextStyle(
-                  color: Color(0xFF527DAA),
-                  letterSpacing: 1.5,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'OpenSans',
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
+          child: Column(
+            children: <Widget>[
+              // Container(
+              //   padding: EdgeInsets.only(top: 25.0),
+              //   child: Visibility(
+              //     visible: error, //Default is true,
+              //     child: Text(msg, style: kLabelStyleWrong),
+              //   ),
+              // ),
+              Container(
+                // padding: EdgeInsets.symmetric(vertical: 25.0),
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 5.0,
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, 'registro');
+                  },
+                  padding: EdgeInsets.all(15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.white,
+                  child: Text(
+                    'REGISTRARSE',
+                    style: TextStyle(
+                      color: Color(0xFF527DAA),
+                      letterSpacing: 1.5,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 
