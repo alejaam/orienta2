@@ -15,7 +15,6 @@ class RegistroPage extends StatefulWidget {
 class _RegistroPageState extends State<RegistroPage> {
   final usuarioProvider = new UsuarioProvider();
 
-  bool _rememberMe = false;
   bool checkUser;
   bool checkPassword;
   bool error = false;
@@ -67,7 +66,8 @@ class _RegistroPageState extends State<RegistroPage> {
                         height: 20.0,
                       ),
                       _buildPasswordTF(bloc),
-                      _buildSignUpBtn(context, bloc)
+                      _buildSignUpBtn(context, bloc),
+                      _buildForgotPasswordBtn(),
                       // _buildSignInWithText(),
                       // _buildSocialBtnRow(),
                       // _buildSignupBtn(bloc),
@@ -89,11 +89,6 @@ class _RegistroPageState extends State<RegistroPage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Text(
-            //   'Correo/Nombre de usuario',
-            //   style: kLabelStyle,
-            // ),
-            // SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changeEmail,
               obscureText: false,
@@ -103,6 +98,7 @@ class _RegistroPageState extends State<RegistroPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
+                hintText: 'Corero electrónico',
                 labelStyle: TextStyle(color: Colors.white),
                 focusColor: Colors.white,
                 filled: true,
@@ -144,10 +140,6 @@ class _RegistroPageState extends State<RegistroPage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Text(
-            //   'Contraseña',
-            //   style: kLabelStyle,
-            // ),
             SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changePassword,
@@ -198,21 +190,12 @@ class _RegistroPageState extends State<RegistroPage> {
   }
 
   Widget _buildSignUpBtn(BuildContext context, LoginBloc bloc) {
-    // final bloc = Provider.of(context);
-
     return StreamBuilder(
       stream: bloc.formValidStream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return Container(
           child: Column(
             children: <Widget>[
-              // Container(
-              //   padding: EdgeInsets.only(top: 25.0),
-              //   child: Visibility(
-              //     visible: error, //Default is true,
-              //     child: Text(msg, style: kLabelStyleWrong),
-              //   ),
-              // ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 25.0),
                 width: double.infinity,
@@ -244,27 +227,17 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
-  _register(LoginBloc bloc, BuildContext context) {
-    usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
-    Navigator.pushReplacementNamed(context, 'home');
-  }
-
-  Widget _buildSignInWithText() {
-    return Column(
-      children: <Widget>[
-        Text(
-          '- O -',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        SizedBox(height: 20.0),
-        Text(
-          'Iniciar Sesión Con',
+  Widget _buildForgotPasswordBtn() {
+    return Container(
+      // alignment: Alignment.center,
+      child: FlatButton(
+        onPressed: () => Navigator.pushReplacementNamed(context, 'login'),
+        padding: EdgeInsets.only(right: 0.0),
+        child: Text(
+          '¿Ya tienes cuenta?',
           style: kLabelStyle,
         ),
-      ],
+      ),
     );
   }
 
@@ -292,67 +265,9 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
-  Widget _buildSocialBtnRow() {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 30.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          _buildSocialBtn(
-            () => print('Login with Facebook'),
-            AssetImage(
-              'assets/facebook.jpg',
-            ),
-          ),
-          _buildSocialBtn(
-            () => print('Login with Google'),
-            AssetImage(
-              'assets/google.jpg',
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSignupBtn(LoginBloc bloc) {
-    return StreamBuilder(
-      stream: bloc.formValidStream,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        return GestureDetector(
-          onTap: () => print('Sign Up Button Pressed'),
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: '¿No estás registrado?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                TextSpan(
-                  text: ' Regístrate',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  void login() {
-    final route = new MaterialPageRoute(builder: (context) {
-      return HomePage();
-    });
-    Navigator.of(context).pushReplacement(route);
+  _register(LoginBloc bloc, BuildContext context) {
+    usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
+    Navigator.pushReplacementNamed(context, 'home');
   }
 
   _login(LoginBloc bloc, BuildContext context) async {

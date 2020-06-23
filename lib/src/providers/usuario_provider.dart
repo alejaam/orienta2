@@ -42,7 +42,6 @@ class UsuarioProvider {
     };
 
     // print(authData);
-
     final resp = await http.post(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=$_firebaseToken',
         body: json.encode(authData));

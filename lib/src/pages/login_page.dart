@@ -40,7 +40,6 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
               ),
               Container(
-                height: double.infinity,
                 child: SingleChildScrollView(
                   physics: AlwaysScrollableScrollPhysics(),
                   padding: EdgeInsets.symmetric(
@@ -61,17 +60,11 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(bloc),
-                      // SizedBox(
-                      //   height: 30.0,
-                      // ),
                       _buildPasswordTF(bloc),
                       _buildForgotPasswordBtn(),
                       _buildRememberMeCheckbox(),
                       _buildLoginBtn(context, bloc),
                       _buildSignUpBtn(context, bloc)
-                      // _buildSignInWithText(),
-                      // _buildSocialBtnRow(),
-                      // _buildSignupBtn(bloc),
                     ],
                   ),
                 ),
@@ -90,11 +83,6 @@ class _LoginPageState extends State<LoginPage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Text(
-            //   'Correo/Nombre de usuario',
-            //   style: kLabelStyle,
-            // ),
-            // SizedBox(height: 10.0),
             TextField(
               obscureText: false,
               onChanged: bloc.changeEmail,
@@ -147,10 +135,6 @@ class _LoginPageState extends State<LoginPage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Text(
-            //   'Contraseña',
-            //   style: kLabelStyle,
-            // ),
             SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changePassword,
@@ -239,20 +223,12 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildLoginBtn(BuildContext context, LoginBloc bloc) {
-    // final bloc = Provider.of(context);
     return StreamBuilder(
       stream: bloc.formValidStream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return Container(
           child: Column(
             children: <Widget>[
-              // Container(
-              //   padding: EdgeInsets.only(top: 25.0),
-              //   child: Visibility(
-              //     visible: error, //Default is true,
-              //     child: Text(msg, style: kLabelStyleWrong),
-              //   ),
-              // ),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 25.0),
                 width: double.infinity,
@@ -285,22 +261,13 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildSignUpBtn(BuildContext context, LoginBloc bloc) {
-    // final bloc = Provider.of(context);
     return StreamBuilder(
       stream: bloc.formValidStream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return Container(
           child: Column(
             children: <Widget>[
-              // Container(
-              //   padding: EdgeInsets.only(top: 25.0),
-              //   child: Visibility(
-              //     visible: error, //Default is true,
-              //     child: Text(msg, style: kLabelStyleWrong),
-              //   ),
-              // ),
               Container(
-                // padding: EdgeInsets.symmetric(vertical: 25.0),
                 width: double.infinity,
                 child: RaisedButton(
                   elevation: 5.0,
@@ -329,112 +296,6 @@ class _LoginPageState extends State<LoginPage> {
         );
       },
     );
-  }
-
-  Widget _buildSignInWithText() {
-    return Column(
-      children: <Widget>[
-        Text(
-          '- O -',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        SizedBox(height: 20.0),
-        Text(
-          'Iniciar Sesión Con',
-          style: kLabelStyle,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildSocialBtn(Function onTap, AssetImage logo) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 60.0,
-        width: 60.0,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black26,
-              offset: Offset(0, 2),
-              blurRadius: 6.0,
-            ),
-          ],
-          image: DecorationImage(
-            image: logo,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildSocialBtnRow() {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 30.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          _buildSocialBtn(
-            () => print('Login with Facebook'),
-            AssetImage(
-              'assets/facebook.jpg',
-            ),
-          ),
-          _buildSocialBtn(
-            () => print('Login with Google'),
-            AssetImage(
-              'assets/google.jpg',
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSignupBtn(LoginBloc bloc) {
-    return StreamBuilder(
-      stream: bloc.formValidStream,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        return GestureDetector(
-          onTap: () => print('Sign Up Button Pressed'),
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: '¿No estás registrado?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                TextSpan(
-                  text: ' Regístrate',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  void login() {
-    final route = new MaterialPageRoute(builder: (context) {
-      return HomePage();
-    });
-    Navigator.of(context).pushReplacement(route);
   }
 
   _login(LoginBloc bloc, BuildContext context) async {
