@@ -12,7 +12,7 @@ void mostrarAlerta(BuildContext context, String mensaje) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Inormación incorrecta'),
+          title: Text('Atención'),
           content: Text(mensaje),
           actions: <Widget>[
             FlatButton(

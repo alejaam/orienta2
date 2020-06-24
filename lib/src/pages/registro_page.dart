@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orientat/src/bloc/login_bloc.dart';
 import 'package:orientat/src/bloc/provider.dart';
-import 'package:orientat/src/pages/home_page.dart';
 import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
@@ -17,11 +16,7 @@ class _RegistroPageState extends State<RegistroPage> {
 
   bool checkUser;
   bool checkPassword;
-  bool error = false;
   bool _obscureText = true;
-  String user = "";
-  String password = "";
-  String msg = "*Error en usuario o contraseña";
   Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
 
   @override
@@ -98,7 +93,8 @@ class _RegistroPageState extends State<RegistroPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                hintText: 'Corero electrónico',
+                hintText: 'example@example.com',
+                hintStyle: TextStyle(color: Colors.white70),
                 labelStyle: TextStyle(color: Colors.white),
                 focusColor: Colors.white,
                 filled: true,
@@ -241,41 +237,12 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
-  Widget _buildSocialBtn(Function onTap, AssetImage logo) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 60.0,
-        width: 60.0,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black26,
-              offset: Offset(0, 2),
-              blurRadius: 6.0,
-            ),
-          ],
-          image: DecorationImage(
-            image: logo,
-          ),
-        ),
-      ),
-    );
-  }
-
-  _register(LoginBloc bloc, BuildContext context) {
-    usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
-    Navigator.pushReplacementNamed(context, 'home');
-  }
-
-  _login(LoginBloc bloc, BuildContext context) async {
-    Map info = await usuarioProvider.login(bloc.email, bloc.password);
+  _register(LoginBloc bloc, BuildContext context) async {
+    Map info = await usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
     if (info['ok']) {
       Navigator.pushReplacementNamed(context, 'home');
     } else {
-      mostrarAlerta(context, 'Correo y/o Contraseña incorrecta');
+      mostrarAlerta(context, 'El correo ya esta registrado');
     }
   }
 }

@@ -26,6 +26,8 @@ class LoginBloc with Validators {
   String get password => _passwordController.value;
 
   dispose() {
+    _emailController.value = '';
+    _passwordController.value = '';
     _emailController?.close();
     _passwordController?.close();
   }

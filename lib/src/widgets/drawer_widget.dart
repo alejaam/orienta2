@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
+import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:share/share.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -8,6 +10,9 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final usuarioProvider = new UsuarioProvider();
+    // final bloc = Provider.of(context);
+    final _prefs = new PreferenciasUsuario();
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -15,7 +20,7 @@ class MyDrawer extends StatelessWidget {
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: Color.fromRGBO(38, 93, 130, 1)),
             accountName: Text("Alejandro Alamar"),
-            accountEmail: Text("ale.jaam7@gmail.com"),
+            accountEmail: Text(_prefs.mail),
             currentAccountPicture: InkWell(
               splashColor: Colors.transparent,
               onTap: () {
@@ -71,6 +76,14 @@ class MyDrawer extends StatelessWidget {
             title: Text('Ajustes'),
             onTap: () {
               Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Cerrar sesión'),
+            onTap: () {
+              usuarioProvider.signOut(context);
+              Navigator.pushReplacementNamed(context, 'login');
             },
           ),
         ],

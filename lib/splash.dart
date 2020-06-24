@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/src/pages/home_page.dart';
 import 'package:orientat/src/pages/login_page.dart';
+import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 class Splash extends StatefulWidget {
@@ -10,11 +12,13 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  final usuarioProvider = new UsuarioProvider();
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      navigateAfterSeconds: LoginPage(),
+      navigateAfterSeconds:
+          usuarioProvider.isAuthenticated ? LoginPage() : HomePage(),
       title: Text(
         'Orienta-T',
         style: TextStyle(
@@ -28,9 +32,6 @@ class _SplashState extends State<Splash> {
       loaderColor: Color.fromRGBO(69, 142, 190, 1),
       loadingText:
           Text("All rigths reserved.", style: TextStyle(color: Colors.white)),
-          
     );
   }
 }
-
-

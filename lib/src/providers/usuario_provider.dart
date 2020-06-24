@@ -13,18 +13,20 @@ class UsuarioProvider {
       'password': password,
       'returnSecureToken': true
     };
-    print(authData);
 
+    // print(authData);
     final resp = await http.post(
         'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=$_firebaseToken',
         body: json.encode(authData));
 
     Map<String, dynamic> decodeResp = json.decode(resp.body);
 
-    print(decodeResp);
+    // print(decodeResp);
+    print(_prefs.token);
 
     if (decodeResp.containsKey('idToken')) {
       _prefs.token = decodeResp['idToken'];
+      _prefs.mail = email;
       return {'ok': true, 'token': decodeResp['idToken']};
     } else {
       return {'ok': false, 'mensaje': decodeResp['error']['message']};
@@ -48,12 +50,22 @@ class UsuarioProvider {
 
     Map<String, dynamic> decodeResp = json.decode(resp.body);
 
-    // print(decodeResp);
+    print(decodeResp);
     if (decodeResp.containsKey('idToken')) {
       _prefs.token = decodeResp['idToken'];
       return {'ok': true, 'token': decodeResp['idToken']};
     } else {
       return {'ok': false, 'mensaje': decodeResp['error']['message']};
     }
+  }
+
+  void signOut(context){
+    _prefs.token = '';
+    _prefs.mail = '';
+  }
+
+  bool get isAuthenticated {
+    print(this._prefs.token);
+    return (this._prefs.token == '');
   }
 }

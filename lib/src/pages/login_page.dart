@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orientat/src/bloc/login_bloc.dart';
 import 'package:orientat/src/bloc/provider.dart';
-import 'package:orientat/src/pages/home_page.dart';
 import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
@@ -14,14 +13,10 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final usuarioProvider = new UsuarioProvider();
-
   bool _rememberMe = false;
-  bool checkUser;
   bool checkPassword;
-  bool error = false;
-  String user = "";
-  String password = "";
-  String msg = "*Error en usuario o contraseña";
+  bool _obscureText = true;
+  Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -138,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changePassword,
-              obscureText: true,
+              obscureText: _obscureText,
               cursorColor: Colors.white,
               style: TextStyle(
                 color: Colors.white,
@@ -165,13 +160,16 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 suffixIcon: GestureDetector(
                   onTap: () {
-                    // model.isVisible = !model.isVisible;
+                    setState(() {
+                      _obscureText = !_obscureText;
+                      _iconPass = (_obscureText)
+                          ? Icon(Icons.visibility,
+                              size: 18, color: Colors.white)
+                          : Icon(Icons.visibility_off,
+                              size: 18, color: Colors.white);
+                    });
                   },
-                  child: Icon(
-                    Icons.visibility,
-                    size: 18,
-                    color: Colors.white,
-                  ),
+                  child: _iconPass,
                 ),
               ),
             ),
