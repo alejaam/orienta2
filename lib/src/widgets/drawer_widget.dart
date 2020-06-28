@@ -4,27 +4,31 @@ import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:share/share.dart';
 
 class MyDrawer extends StatelessWidget {
-  final String texto = "¡Hey! Prueba esta app, te ayudará a decidir tu futuro profesional :D.";
+  final String texto =
+      "¡Hey! Prueba esta app, te ayudará a decidir tu futuro profesional :D.";
   final String mensaje = "prueba mensaje";
   const MyDrawer({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final usuarioProvider = new UsuarioProvider();
-    // final bloc = Provider.of(context);
     final _prefs = new PreferenciasUsuario();
+    // final bloc = Provider.of(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: Color.fromRGBO(38, 93, 130, 1)),
-            accountName: Text("Alejandro Alamar"),
+            accountName: Text(_prefs.name),
             accountEmail: Text(_prefs.mail),
             currentAccountPicture: InkWell(
               splashColor: Colors.transparent,
               onTap: () {
-                Navigator.pushNamed(context, 'perfil');
+                // Navigator.pushNamed(context, 'perfil');
+                print(_prefs.mail);
+                print(_prefs.name);
+                print(_prefs.tokenUser);
               },
               child: CircleAvatar(
                 child: ClipRRect(

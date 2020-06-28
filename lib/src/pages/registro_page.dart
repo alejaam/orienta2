@@ -13,15 +13,18 @@ class RegistroPage extends StatefulWidget {
 
 class _RegistroPageState extends State<RegistroPage> {
   final usuarioProvider = new UsuarioProvider();
-
   bool checkUser;
   bool checkPassword;
   bool _obscureText = true;
   Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
+  final _text = TextEditingController();
+  bool _validate = false;
 
   @override
   Widget build(BuildContext context) {
     final bloc = Provider.of(context);
+    print(bloc.email);
+    print(bloc.password);
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(69, 142, 190, 1),
@@ -57,15 +60,12 @@ class _RegistroPageState extends State<RegistroPage> {
                       ),
                       SizedBox(height: 30.0),
                       _buildEmailTF(bloc),
-                      SizedBox(
-                        height: 20.0,
-                      ),
+                      SizedBox(height: 10.0),
+                      _buildNameTF(bloc),
+                      SizedBox(height: 10.0),
                       _buildPasswordTF(bloc),
                       _buildSignUpBtn(context, bloc),
                       _buildForgotPasswordBtn(),
-                      // _buildSignInWithText(),
-                      // _buildSocialBtnRow(),
-                      // _buildSignupBtn(bloc),
                     ],
                   ),
                 ),
@@ -129,6 +129,60 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
+  Widget _buildNameTF(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.nameStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            TextField(
+              controller: _text,
+              onChanged: (text) {
+                bloc.changeName(text);
+                if (text.length <= 0) {
+                  setState(() {
+                    _validate = true;
+                  });
+                } else {
+                  setState(() {
+                    _validate = false;
+                  });
+                }
+              },
+              obscureText: false,
+              cursorColor: Colors.white,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14.0,
+              ),
+              decoration: InputDecoration(
+                labelStyle: TextStyle(color: Colors.white),
+                focusColor: Colors.white,
+                filled: true,
+                enabledBorder: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+                labelText: "Nombre",
+                errorText: _validate ? "El nombre es obligatorio" : null,
+                prefixIcon: Icon(
+                  Icons.portrait,
+                  size: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Widget _buildPasswordTF(LoginBloc bloc) {
     return StreamBuilder(
       stream: bloc.passwordStream,
@@ -136,7 +190,6 @@ class _RegistroPageState extends State<RegistroPage> {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 10.0),
             TextField(
               onChanged: bloc.changePassword,
               obscureText: _obscureText,
@@ -197,8 +250,9 @@ class _RegistroPageState extends State<RegistroPage> {
                 width: double.infinity,
                 child: RaisedButton(
                   elevation: 5.0,
-                  onPressed:
-                      snapshot.hasData ? () => _register(bloc, context) : null,
+                  onPressed: snapshot.hasData && _text.text.isNotEmpty
+                      ? () => _register(bloc, context)
+                      : null,
                   padding: EdgeInsets.all(15.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
@@ -238,7 +292,8 @@ class _RegistroPageState extends State<RegistroPage> {
   }
 
   _register(LoginBloc bloc, BuildContext context) async {
-    Map info = await usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
+    Map info = await usuarioProvider.nuevoUsuario(
+        bloc.email, bloc.password, bloc.name);
     if (info['ok']) {
       Navigator.pushReplacementNamed(context, 'home');
     } else {

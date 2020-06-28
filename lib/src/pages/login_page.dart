@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orientat/src/bloc/login_bloc.dart';
-import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
@@ -17,10 +16,12 @@ class _LoginPageState extends State<LoginPage> {
   bool checkPassword;
   bool _obscureText = true;
   Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
-
+  final bloc = LoginBloc();
   @override
   Widget build(BuildContext context) {
-    final bloc = Provider.of(context);
+    // final bloc = Provider.of(context);
+    print(bloc.email);
+    print(bloc.password);
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(69, 142, 190, 1),

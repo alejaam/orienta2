@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/overboard.dart';
 import 'package:orientat/splash.dart';
 import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/pages/carreras_page.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (BuildContext context) => Splash(),
+          'overboard': (BuildContext context) => Overboard(),
           'login': (BuildContext context) => LoginPage(),
           'registro': (BuildContext context) => RegistroPage(),
           'instituciones': (BuildContext context) => InstitucionesPage(),

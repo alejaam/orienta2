@@ -22,4 +22,13 @@ class Validators {
       sink.addError('La contraseña debe tener más de 6 caracteres');
     }
   });
+
+  final validarName =
+      StreamTransformer<String, String>.fromHandlers(handleData: (name, sink) {
+    if (name.length > 0) {
+      sink.add(name);
+    } else {
+      sink.addError('El nombre es obligatorio');
+    }
+  });
 }
