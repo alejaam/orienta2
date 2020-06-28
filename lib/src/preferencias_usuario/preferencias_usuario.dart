@@ -24,6 +24,33 @@ class PreferenciasUsuario {
   set token(String value) {
     _prefs.setString('token', value);
   }
+  // GET y SET del token
+  get firstInit {
+    return _prefs.getBool('firstInit') ?? false;
+  }
+
+  set firstInit(bool value) {
+    _prefs.setBool('firstInit', value);
+  }
+
+  // GET y SET del nombre
+  get name {
+    return _prefs.getString('name') ?? '';
+  }
+
+  set name(String value) {
+    _prefs.setString('name', value);
+  }
+
+  // GET y SET del nombre
+  get tokenUser {
+    return _prefs.getString('tokenUser') ?? '';
+  }
+
+  set tokenUser(String value) {
+    _prefs.setString('tokenUser', value);
+  }
+
   // GET y SET del mail
   get mail {
     return _prefs.getString('mail') ?? '';
