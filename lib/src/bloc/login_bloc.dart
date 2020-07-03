@@ -20,6 +20,9 @@ class LoginBloc with Validators {
   Stream<bool> get formValidStream =>
       CombineLatestStream.combine2(emailStream, passwordStream, (e, p) => true);
 
+  Stream<bool> get formValidStreamUpdate =>
+      CombineLatestStream.combine2(emailStream, nameStream, (e, p) => true);
+
   //Insertar valores al Stream
   Function(String) get changeEmail => _emailController.sink.add;
   Function(String) get changePassword => _passwordController.sink.add;

@@ -95,7 +95,8 @@ class _RegistroPageState extends State<RegistroPage> {
               decoration: InputDecoration(
                 hintText: 'example@example.com',
                 hintStyle: TextStyle(color: Colors.white70),
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 focusColor: Colors.white,
                 filled: true,
                 enabledBorder: UnderlineInputBorder(
@@ -157,7 +158,8 @@ class _RegistroPageState extends State<RegistroPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 focusColor: Colors.white,
                 filled: true,
                 enabledBorder: UnderlineInputBorder(
@@ -199,7 +201,8 @@ class _RegistroPageState extends State<RegistroPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 focusColor: Colors.white,
                 filled: true,
                 enabledBorder: UnderlineInputBorder(

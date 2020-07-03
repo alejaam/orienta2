@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:orientat/src/bloc/login_bloc.dart';
+import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:orientat/src/utils/utils.dart';
 import 'package:orientat/utils/constants.dart';
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                       _buildEmailTF(bloc),
                       _buildPasswordTF(bloc),
                       _buildForgotPasswordBtn(),
-                      _buildRememberMeCheckbox(),
+                      // _buildRememberMeCheckbox(),
                       _buildLoginBtn(context, bloc),
                       _buildSignUpBtn(context, bloc)
                     ],
@@ -88,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 focusColor: Colors.white,
                 filled: true,
                 errorText: snapshot.error,
@@ -141,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                 fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 focusColor: Colors.white,
                 filled: true,
                 errorText: snapshot.error,

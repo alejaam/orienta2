@@ -183,37 +183,35 @@ class CuestionarioFacil {
     var mayor;
     if (area1 >= area2 && area1 >= area3 && area1 >= area4 && area1 >= area5) {
       mayor =
-          "¡Felicidades, tienes aptitudes para entrar al Área 1 - Arte y Creatividad!";
+          "¡Felicidades, tienes aptitudes para entrar en Arte y Creatividad!";
     } else if (area2 >= area1 &&
         area2 >= area3 &&
         area2 >= area4 &&
         area2 >= area5) {
-      mayor =
-          "¡Felicidades, tienes aptitudes para entrar al Área 2 - Ciencias Sociales!";
+      mayor = "¡Felicidades, tienes aptitudes para área de Ciencias Sociales!";
     } else if (area3 >= area1 &&
         area3 >= area2 &&
         area3 >= area4 &&
         area3 >= area5) {
       mayor =
-          "¡Felicidades, tienes aptitudes para entrar al Área 3 - Ecónomica, Administrativa y Financiera!";
+          "¡Felicidades, tienes aptitudes para área Ecónomica, Administrativa y Financiera!";
     } else if (area4 >= area1 &&
         area4 >= area2 &&
         area4 >= area3 &&
         area4 >= area5) {
-      mayor =
-          "¡Felicidades, tienes aptitudes para entrar al Área 4 - Ciencia y Tecnología!";
+      mayor = "¡Felicidades, tienes aptitudes para la Ciencia y tecnología!";
     } else if (area5 >= area1 &&
         area5 >= area2 &&
         area5 >= area3 &&
         area5 >= area4) {
       mayor =
-          "¡Felicidades, tienes aptitudes para entrar al Área 5 - Ciencias Ecológicas, Biológicas y De La Salud!";
+          "¡Felicidades, tienes aptitudes para entrar al área de Ciencias Ecológicas, Biológicas y De La Salud!";
     }
     return mayor;
   }
 
   void validararea() {
-    switch (_questionNumber+1) {
+    switch (_questionNumber + 1) {
       case 4:
       case 9:
       case 12:

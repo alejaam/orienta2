@@ -24,7 +24,17 @@ class PreferenciasUsuario {
   set token(String value) {
     _prefs.setString('token', value);
   }
-  // GET y SET del token
+
+  // GET y SET del tokenRefresh
+  get tokenRefresh {
+    return _prefs.getString('tokenRefresh') ?? '';
+  }
+
+  set tokenRefresh(String value) {
+    _prefs.setString('tokenRefresh', value);
+  }
+
+  // GET y SET del primer inicio de app
   get firstInit {
     return _prefs.getBool('firstInit') ?? false;
   }
@@ -42,7 +52,7 @@ class PreferenciasUsuario {
     _prefs.setString('name', value);
   }
 
-  // GET y SET del nombre
+  // GET y SET del tokenUser
   get tokenUser {
     return _prefs.getString('tokenUser') ?? '';
   }
@@ -67,5 +77,13 @@ class PreferenciasUsuario {
 
   set ultimaPagina(String value) {
     _prefs.setString('ultimaPagina', value);
+  }
+  // GET y SET de la foto
+  get foto {
+    return _prefs.getString('foto') ?? '';
+  }
+
+  set foto(String value) {
+    _prefs.setString('foto', value);
   }
 }

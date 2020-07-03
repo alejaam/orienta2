@@ -23,7 +23,7 @@ class _SplashState extends State<Splash> {
       navigateAfterSeconds:
           usuarioProvider.isAuthenticated ? _prefs.firstInit? LoginPage() : Overboard() : HomePage(),
       title: Text(
-        'Orienta-T',
+        'Orienta2',
         style: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 50.0, color: Colors.white),
       ),

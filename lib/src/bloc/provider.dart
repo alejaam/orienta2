@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:orientat/src/bloc/login_bloc.dart';
+import 'package:orientat/src/bloc/usuarios_bloc.dart';
 
 
 class Provider extends InheritedWidget {
 
   final loginBloc = LoginBloc();
-  // final _productosBloc = ProductosBloc();
+  final usuarioBloc = UsuariosBloc();
 
   static Provider _instancia;
 
@@ -25,6 +26,9 @@ class Provider extends InheritedWidget {
   //Cuando usemos este provider ocupamos la instancia del login bloc, que regrese el estado como esta este loginBloc
   static LoginBloc of(BuildContext context) {
     return (context.dependOnInheritedWidgetOfExactType<Provider>().loginBloc);
+  }
+  static UsuariosBloc usuariosBloc (BuildContext context) {
+    return (context.dependOnInheritedWidgetOfExactType<Provider>().usuarioBloc);
   }
   // static ProductosBloc productosBloc (BuildContext context) {
   //   return (context.dependOnInheritedWidgetOfExactType<Provider>()._productosBloc);

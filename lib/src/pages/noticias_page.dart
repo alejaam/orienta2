@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/src/widgets/action.dart';
 import 'package:orientat/src/widgets/drawer_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,42 +21,16 @@ class _NoticiasPageState extends State<NoticiasPage> {
               .copyWith(canvasColor: Color.fromRGBO(187, 225, 250, 1)),
           child: MyDrawer()),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
-        actions: <Widget>[
-          Container(
-            child: Icon(Icons.notifications_none),
-          ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            // child:
-            child: InkWell(
-              borderRadius: BorderRadius.circular(10),
-              onTap: () {
-                Navigator.pushNamed(context, 'perfil');
-              },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.network(
-                  'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg',
-                  width: 40,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: Center(child: Text("ale_jaam")),
-          ),
-        ],
+        actions: <Widget>[MyActions()],
       ),
       body: ListView(
         padding: EdgeInsets.all(10),
         children: <Widget>[
           SizedBox(height: 20.0),
           _cardTipo2(
-              "Amplía   politécnico registro en  línea para nivel superior",
+              "Amplía politécnico registro en  línea para nivel superior",
               'https://periodicoeltiempo.mx/wp-content/uploads/2020/04/10-POLITECNICO.jpg'),
           SizedBox(height: 20.0),
           _cardTipo2(
@@ -83,8 +58,9 @@ class _NoticiasPageState extends State<NoticiasPage> {
     // final random = Random();
     // int imagen = random.nextInt(300);
     final card = GestureDetector(
-      onTap: (){
-        _launchURL('https://www.infobae.com/america/mexico/2020/04/08/uam-buap-anahuac-y-mas-universidades-tambien-retiraran-internos-de-hospitales-ante-covid-19/');
+      onTap: () {
+        _launchURL(
+            'https://eltiempomonclova.mx/noticia/2020/amplia-politecnico-registro-en-linea-para-nivel-superior.html');
       },
       // clipBehavior: Clip.antiAlias,
       child: Container(
@@ -124,7 +100,7 @@ class _NoticiasPageState extends State<NoticiasPage> {
     );
   }
 
-   _launchURL(url) async {
+  _launchURL(url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {

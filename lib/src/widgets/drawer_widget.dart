@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
 import 'package:orientat/src/providers/usuario_provider.dart';
 import 'package:share/share.dart';
@@ -13,7 +14,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final usuarioProvider = new UsuarioProvider();
     final _prefs = new PreferenciasUsuario();
-    // final bloc = Provider.of(context);
+    final bloc = Provider.of(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -25,30 +26,28 @@ class MyDrawer extends StatelessWidget {
             currentAccountPicture: InkWell(
               splashColor: Colors.transparent,
               onTap: () {
-                // Navigator.pushNamed(context, 'perfil');
-                print(_prefs.mail);
-                print(_prefs.name);
-                print(_prefs.tokenUser);
+                Navigator.pushNamed(context, 'perfil');
               },
               child: CircleAvatar(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(100),
-                  child: Image.network(
-                      'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg'),
+                  child: _prefs.foto != ''
+                      ? Image.network(_prefs.foto, fit: BoxFit.cover)
+                      : AssetImage('asstes/no-image.png'),
                 ),
               ),
             ),
           ),
           ListTile(
             leading: Icon(Icons.local_activity),
-            title: Text('Orienta-T Pro'),
+            title: Text('Orienta2 Pro'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Compartir'),
+            leading: Icon(Icons.person_add),
+            title: Text('Invitar a un amigo'),
             onTap: () {
               // Navigator.pop(context);
               final RenderBox box = context.findRenderObject();
@@ -87,6 +86,7 @@ class MyDrawer extends StatelessWidget {
             title: Text('Cerrar sesión'),
             onTap: () {
               usuarioProvider.signOut(context);
+              // bloc.dispose();ale
               Navigator.pushReplacementNamed(context, 'login');
             },
           ),
