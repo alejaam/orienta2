@@ -127,7 +127,6 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
   }
-
   Widget _buildInfo(BuildContext context, double width) {
     return Container(
         padding: EdgeInsets.all(10),
