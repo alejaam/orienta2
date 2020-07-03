@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:orientat/src/pages/profile_page.dart';
-import 'package:orientat/src/pages/superiores_page.dart';
-import 'package:orientat/src/pages/testfacil.dart';
+import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
+import 'package:orientat/src/providers/menu_provider.dart';
+import 'package:orientat/src/utils/utils.dart';
+import 'package:orientat/src/widgets/action.dart';
+import 'package:orientat/src/widgets/drawer_widget.dart';
+import 'package:orientat/utils/icono_string_util.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -11,6 +14,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _prefs = PreferenciasUsuario();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,239 +25,96 @@ class _HomePageState extends State<HomePage> {
       drawer: Theme(
           data: Theme.of(context)
               .copyWith(canvasColor: Color.fromRGBO(187, 225, 250, 1)),
-          child: menuLateral()),
+          child: MyDrawer()),
       appBar: AppBar(
-        title: Text("Orienta-T"),
+        title: Text("Orienta2"),
         backgroundColor: Color.fromRGBO(38, 93, 130, 1),
-        actions: <Widget>[
-          Container(
-            child: Icon(Icons.notifications_none),
-          ),
-          Padding(
-            padding: EdgeInsets.all(8.0),
-            // child:
-            child: InkWell(
-              borderRadius: BorderRadius.circular(10),
-              onTap: () {
-                final route = new MaterialPageRoute(builder: (context) {
-                  return ProfilePage();
-                });
-                Navigator.push(context, route);
-              },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.network(
-                  'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg',
-                  width: 40,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: Center(child: Text("ale_jaam")),
-          ),
-        ],
+        actions: <Widget>[MyActions()],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Container(
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: <Widget>[
-              cards(context, "Universidades"),
-              cards(context, "Test"),
-              cards(context, "Noticias"),
-              cards(context, "Convocatorias")
-            ],
-          ),
-        ),
+        padding: const EdgeInsets.all(20.0),
+        child: _buildCards(),
       ),
     );
   }
 
-  Widget cards(context, String item) {
-    Widget content = new GestureDetector();
-    switch (item) {
-      case "Universidades":
-        content = GestureDetector(
-          onTap: () {},
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Card(
-                color: Color.fromRGBO(69, 142, 190, 1),
-                elevation: 10.0,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                  onTap: () {
-                    final route = new MaterialPageRoute(builder: (context) {
-                  return SuperioresPage();
-                });
-                Navigator.push(context, route);
-                  },
-                  borderRadius: BorderRadius.circular(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Column(
-                        // crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisSize: MainAxisSize.min,
-                        verticalDirection: VerticalDirection.down,
-                        children: <Widget>[
-                          Center(
-                              child: Icon(
-                            Icons.school,
-                            size: 40.0,
-                            color: Colors.white,
-                          )),
-                          new Center(
-                            child: new Text(item,
-                                style: new TextStyle(
-                                    fontSize: 18.0, color: Colors.white)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-        break;
-      case "Test":
-        content = GestureDetector(
-          onTap: () {},
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Card(
-                color: Color.fromRGBO(69, 142, 190, 1),
-                elevation: 10.0,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                  onTap: () {
-                    _mostrarAlerta(context);
-                  },
-                  borderRadius: BorderRadius.circular(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Center(
-                              child: Icon(
-                            Icons.assignment,
-                            size: 40.0,
-                            color: Colors.white,
-                          )),
-                          new Center(
-                            child: new Text(item,
-                                style: new TextStyle(
-                                    fontSize: 18.0, color: Colors.white)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-        break;
-      case "Noticias":
-        content = GestureDetector(
-          onTap: () {
-            print("Hola");
-          },
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Card(
-                color: Color.fromRGBO(69, 142, 190, 1),
-                elevation: 10.0,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                  onTap: () {},
-                  borderRadius: BorderRadius.circular(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Center(
-                              child: Icon(
-                            Icons.description,
-                            size: 40.0,
-                            color: Colors.white,
-                          )),
-                          new Center(
-                            child: new Text(item,
-                                style: new TextStyle(
-                                    fontSize: 18.0, color: Colors.white)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-        break;
-      case "Convocatorias":
-        content = GestureDetector(
-          onTap: () {
-            print("Hola");
-          },
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Card(
-                color: Color.fromRGBO(69, 142, 190, 1),
-                elevation: 10.0,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: InkWell(
-                  onTap: () {},
-                  borderRadius: BorderRadius.circular(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Center(
-                              child: Icon(
-                            Icons.calendar_today,
-                            size: 40.0,
-                            color: Colors.white,
-                          )),
-                          new Center(
-                            child: new Text(item,
-                                style: new TextStyle(
-                                    fontSize: 18.0, color: Colors.white)),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-        break;
-      default:
-    }
+  Widget _buildCards() {
+    return FutureBuilder(
+      future: menuProvider.cargarData("menu_opts.json"),
+      initialData: [],
+      builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+        if (snapshot.hasData) {
+          return GridView.count(
+              crossAxisCount: 2, children: _cardItems(snapshot.data, context));
+        } else {
+          return CircularProgressIndicator();
+        }
+      },
+    );
+  }
 
-    return content;
+  List<Widget> _cardItems(List<dynamic> data, context) {
+    final List<Widget> opciones = [];
+    for (var opt in data) {
+      if (opt['ruta'] == 'perfil') {
+        continue;
+      }
+      final widgetTemp = GestureDetector(
+        onTap: () {},
+        child: Container(
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Card(
+              color: Color.fromRGBO(69, 142, 190, 1),
+              elevation: 10.0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              child: InkWell(
+                onTap: () {
+                  switch (opt['ruta']) {
+                    case 'instituciones':
+                      Navigator.pushNamed(context, opt['ruta']);
+                      break;
+                    case 'test':
+                      _mostrarAlerta(context);
+                      break;
+                    case 'convocatorias':
+                      mostrarAlerta(context,
+                          "POR EL COVID-19 AÚN NO HAY INFORMACIÓN PRECISA");
+                      break;
+                    default:
+                      Navigator.pushNamed(context, opt['ruta']);
+                  }
+                },
+                borderRadius: BorderRadius.circular(20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Column(
+                      // crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      verticalDirection: VerticalDirection.down,
+                      children: <Widget>[
+                        Center(
+                          child: getIcon(opt['icon']),
+                        ),
+                        new Center(
+                          child: new Text(opt['texto'],
+                              style: new TextStyle(
+                                  fontSize: 18.0, color: Colors.white)),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+      opciones..add(widgetTemp);
+    }
+    return opciones;
   }
 
   void _mostrarAlerta(BuildContext context) {
@@ -263,31 +126,33 @@ class _HomePageState extends State<HomePage> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)),
             title: Text("Instrucciones"),
-            content: Column(
-              mainAxisSize:
-                  MainAxisSize.min, //El contenido interno dice el tamaño
-              children: <Widget>[
-                ListTile(
-                  title: Text(
-                      "1. A continuación ta haremos una serie de 80 preguntas y enunciados(Bastante rápidas)"),
-                ),
-                ListTile(
-                  title: Text(
-                      "2. Contestala con toda sinceridad para obtener un resultado más preciso"),
-                ),
-                ListTile(
-                  title: Text(
-                      "3. Las respuestas solo son 2: Me agrada o me desagrada"),
-                ),
-                ListTile(
-                  title: Text(
-                      "4. No podrás salir del test hasta finalizar"),
-                ),
-              ],
+            contentPadding: EdgeInsets.all(5),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize:
+                    MainAxisSize.min, //El contenido interno dice el tamaño
+                children: <Widget>[
+                  ListTile(
+                    title: Text(
+                        "A continuación te haremos una serie de 80 preguntas y enunciados(Bastante rápidas)"),
+                  ),
+                  ListTile(
+                    title: Text(
+                        "1. Contestala con toda sinceridad para obtener un resultado más preciso"),
+                  ),
+                  ListTile(
+                    title: Text(
+                        "2. Las respuestas solo son 2, Me agrada o me desagrada"),
+                  ),
+                  ListTile(
+                    title: Text("3. No podrás salir del test hasta finalizar"),
+                  ),
+                ],
+              ),
             ),
             actions: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   FlatButton(
                     child: Text("Cancelar"),
@@ -296,12 +161,12 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   FlatButton(
+                    color: Color.fromRGBO(69, 142, 190, 1),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
                     child: Text("Aceptar"),
                     onPressed: () {
-                      final route = MaterialPageRoute(builder: (context) {
-                        return TestFacil();
-                      });
-                      Navigator.pushReplacement(context, route);
+                      Navigator.pushReplacementNamed(context, 'test');
                     },
                   )
                 ],
@@ -311,87 +176,25 @@ class _HomePageState extends State<HomePage> {
         });
   }
 
-  Widget _bottomNavigationBar(context) {
-    return Theme(
-      data: Theme.of(context).copyWith(
-          canvasColor: Color.fromRGBO(69, 142, 190, 1),
-          primaryColor: Color.fromRGBO(49, 59, 64, 1),
-          textTheme: Theme.of(context).textTheme.copyWith(
-              caption: TextStyle(color: Color.fromRGBO(193, 227, 250, 1)))),
-      child: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 30), title: Container()),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.bubble_chart, size: 30), title: Container()),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.perm_identity, size: 30), title: Container())
-        ],
-        onTap: (index) {},
-      ),
-    );
-  }
-
-  Widget menuLateral() {
-    return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          UserAccountsDrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(38, 93, 130, 1)
-            ),
-            accountName: Text("Alejandro Alamar"),
-            accountEmail: Text("ale.jaam7@gmail.com"),
-            currentAccountPicture: CircleAvatar(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.network(
-                    'https://pbs.twimg.com/profile_images/1082891537388843009/QznUq4nA_400x400.jpg'),
-              ),
-            ),
-          ),
-          ListTile(
-            leading: Icon(Icons.local_activity),
-            title: Text('Orienta-T Pro'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Compartir'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          Row(children: <Widget>[
-            Expanded(child: Divider()),
-          ]),
-          ListTile(
-            leading: Icon(Icons.star),
-            title: Text('Calificar'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.feedback),
-            title: Text('Feedback'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Ajustes'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-        ],
-      ),
-    );
-  }
+  // Widget _bottomNavigationBar(context) {
+  //   return Theme(
+  //     data: Theme.of(context).copyWith(
+  //         canvasColor: Color.fromRGBO(69, 142, 190, 1),
+  //         primaryColor: Color.fromRGBO(49, 59, 64, 1),
+  //         textTheme: Theme.of(context).textTheme.copyWith(
+  //             caption: TextStyle(color: Color.fromRGBO(193, 227, 250, 1)))),
+  //     child: BottomNavigationBar(
+  //       currentIndex: 0,
+  //       items: [
+  //         BottomNavigationBarItem(
+  //             icon: Icon(Icons.home, size: 30), title: Container()),
+  //         BottomNavigationBarItem(
+  //             icon: Icon(Icons.bubble_chart, size: 30), title: Container()),
+  //         BottomNavigationBarItem(
+  //             icon: Icon(Icons.perm_identity, size: 30), title: Container())
+  //       ],
+  //       onTap: (index) {},
+  //     ),
+  //   );
+  // }
 }

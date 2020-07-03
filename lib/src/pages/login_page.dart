@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:orientat/src/pages/home_page.dart';
-import 'package:orientat/utilities/constants.dart';
+import 'package:orientat/src/bloc/login_bloc.dart';
+import 'package:orientat/src/bloc/provider.dart';
+import 'package:orientat/src/providers/usuario_provider.dart';
+import 'package:orientat/src/utils/utils.dart';
+import 'package:orientat/utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -9,95 +12,178 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final usuarioProvider = new UsuarioProvider();
   bool _rememberMe = false;
-  bool checkUser;
   bool checkPassword;
-  bool error = false;
-  String user = "";
-  String password = "";
-  String msg = "*Error en usuario o contraseña";
+  bool _obscureText = true;
+  Icon _iconPass = Icon(Icons.visibility, size: 18, color: Colors.white);
+  final bloc = LoginBloc();
+  @override
+  Widget build(BuildContext context) {
+    // final bloc = Provider.of(context);
+    print(bloc.email);
+    print(bloc.password);
 
-  Widget _buildEmailTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Correo/Nombre de usuario',
-          style: kLabelStyle,
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'OpenSans',
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(69, 142, 190, 1),
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Stack(
+            children: <Widget>[
+              Container(
+                height: double.infinity,
+                width: double.infinity,
               ),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 9.0),
-                prefixIcon: Icon(
-                  Icons.email,
-                  color: Colors.grey,
+              Container(
+                child: SingleChildScrollView(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 40.0,
+                    vertical: 120.0,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Iniciar Sesión',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'OpenSans',
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 30.0),
+                      _buildEmailTF(bloc),
+                      _buildPasswordTF(bloc),
+                      _buildForgotPasswordBtn(),
+                      // _buildRememberMeCheckbox(),
+                      _buildLoginBtn(context, bloc),
+                      _buildSignUpBtn(context, bloc)
+                    ],
+                  ),
                 ),
-                hintText: 'Introduce tu correo o nombre de usuario',
-                hintStyle: kHintTextStyle,
-              ),
-              onChanged: (valor) {
-                setState(() {
-                  user = valor;
-                });
-              }),
+              )
+            ],
+          ),
         ),
-      ],
+      ),
     );
   }
 
-  Widget _buildPasswordTF() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          'Contraseña',
-          style: kLabelStyle,
-        ),
-        SizedBox(height: 10.0),
-        Container(
-          alignment: Alignment.centerLeft,
-          decoration: kBoxDecorationStyle,
-          height: 60.0,
-          child: TextField(
-              obscureText: true,
+  Widget _buildEmailTF(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.emailStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            TextField(
+              obscureText: false,
+              onChanged: bloc.changeEmail,
+              cursorColor: Colors.white,
               style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'OpenSans',
+                color: Colors.white,
+                fontSize: 14.0,
               ),
               decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 9.0),
+                labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                focusColor: Colors.white,
+                filled: true,
+                errorText: snapshot.error,
+                enabledBorder: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+                labelText: "Correo",
+                prefixIcon: Icon(
+                  Icons.email,
+                  size: 18,
+                  color: Colors.white,
+                ),
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    // model.isVisible = !model.isVisible;
+                  },
+                  child: Icon(
+                    Icons.alternate_email,
+                    size: 18,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildPasswordTF(LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.passwordStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(height: 10.0),
+            TextField(
+              onChanged: bloc.changePassword,
+              obscureText: _obscureText,
+              cursorColor: Colors.white,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14.0,
+              ),
+              decoration: InputDecoration(
+                labelStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                focusColor: Colors.white,
+                filled: true,
+                errorText: snapshot.error,
+                enabledBorder: UnderlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(color: Colors.white),
+                ),
+                labelText: "Contraseña",
                 prefixIcon: Icon(
                   Icons.lock,
-                  color: Colors.grey,
+                  size: 18,
+                  color: Colors.white,
                 ),
-                hintText: 'Introduce tu contraseña',
-                hintStyle: kHintTextStyle,
+                suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                      _iconPass = (_obscureText)
+                          ? Icon(Icons.visibility,
+                              size: 18, color: Colors.white)
+                          : Icon(Icons.visibility_off,
+                              size: 18, color: Colors.white);
+                    });
+                  },
+                  child: _iconPass,
+                ),
               ),
-              onChanged: (valor) {
-                setState(() {
-                  password = valor;
-                });
-              }),
-        ),
-      ],
+            ),
+          ],
+        );
+      },
     );
   }
 
   Widget _buildForgotPasswordBtn() {
     return Container(
-      alignment: Alignment.centerRight,
+      alignment: Alignment.center,
       child: FlatButton(
         onPressed: () => print('Forgot Password Button Pressed'),
         padding: EdgeInsets.only(right: 0.0),
@@ -136,221 +222,88 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildLoginBtn() {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(top: 25.0),
-            child: Visibility(
-              visible: error, //Default is true,
-              child: Text(msg, style: kLabelStyleWrong),
-              ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 25.0),
-            width: double.infinity,
-            child: RaisedButton(
-              elevation: 5.0,
-              onPressed: () {
-                if (user == "ale_jaam" && password == "admin") {
-                  login();
-                } else {
-                  setState(() {
-                    error = true;
-                  });
-                }
-              },
-              padding: EdgeInsets.all(15.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              color: Colors.white,
-              child: Text(
-                'INICIAR SESIÓN',
-                style: TextStyle(
-                  color: Color(0xFF527DAA),
-                  letterSpacing: 1.5,
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'OpenSans',
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSignInWithText() {
-    return Column(
-      children: <Widget>[
-        Text(
-          '- O -',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        SizedBox(height: 20.0),
-        Text(
-          'Iniciar Sesión Con',
-          style: kLabelStyle,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildSocialBtn(Function onTap, AssetImage logo) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 60.0,
-        width: 60.0,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black26,
-              offset: Offset(0, 2),
-              blurRadius: 6.0,
-            ),
-          ],
-          image: DecorationImage(
-            image: logo,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildSocialBtnRow() {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 30.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          _buildSocialBtn(
-            () => print('Login with Facebook'),
-            AssetImage(
-              'assets/facebook.jpg',
-            ),
-          ),
-          _buildSocialBtn(
-            () => print('Login with Google'),
-            AssetImage(
-              'assets/google.jpg',
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSignupBtn() {
-    return GestureDetector(
-      onTap: () => print('Sign Up Button Pressed'),
-      child: RichText(
-        text: TextSpan(
-          children: [
-            TextSpan(
-              text: '¿No estás registrado?',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            TextSpan(
-              text: ' Regístrate',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(69, 142, 190, 1),
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
+  Widget _buildLoginBtn(BuildContext context, LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
+          child: Column(
             children: <Widget>[
               Container(
-                height: double.infinity,
+                padding: EdgeInsets.symmetric(vertical: 25.0),
                 width: double.infinity,
-                // decoration: BoxDecoration(
-                //   gradient: LinearGradient(
-                //     begin: Alignment.topCenter,
-                //     end: Alignment.bottomCenter,
-                //     colors: [
-                //       Color.fromRGBO(27, 38, 44, 1),
-                //       Color.fromRGBO(15, 76, 117, 1),
-                //       Color.fromRGBO(69, 142, 190, 1),
-                //       Color.fromRGBO(193, 227, 250, 1),
-                //     ],
-                //     stops: [0.1, 0.4, 0.7, 0.9],
-                //   ),
-                // ),
-              ),
-              Container(
-                height: double.infinity,
-                child: SingleChildScrollView(
-                  physics: AlwaysScrollableScrollPhysics(),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 40.0,
-                    vertical: 120.0,
+                child: RaisedButton(
+                  elevation: 5.0,
+                  onPressed:
+                      snapshot.hasData ? () => _login(bloc, context) : null,
+                  padding: EdgeInsets.all(15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Iniciar Sesión',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'OpenSans',
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 30.0),
-                      _buildEmailTF(),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      _buildPasswordTF(),
-                      _buildForgotPasswordBtn(),
-                      _buildRememberMeCheckbox(),
-                      _buildLoginBtn(),
-                      _buildSignInWithText(),
-                      _buildSocialBtnRow(),
-                      _buildSignupBtn(),
-                    ],
+                  color: Colors.white,
+                  child: Text(
+                    'INICIAR SESIÓN',
+                    style: TextStyle(
+                      color: Color(0xFF527DAA),
+                      letterSpacing: 1.5,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
+                    ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 
-  void login() {
-    final route = new MaterialPageRoute(builder: (context) {
-      return HomePage();
-    });
-    Navigator.of(context).pushReplacement(route);
+  Widget _buildSignUpBtn(BuildContext context, LoginBloc bloc) {
+    return StreamBuilder(
+      stream: bloc.formValidStream,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
+          child: Column(
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                child: RaisedButton(
+                  elevation: 5.0,
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, 'registro');
+                  },
+                  padding: EdgeInsets.all(15.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  color: Colors.white,
+                  child: Text(
+                    'REGISTRARSE',
+                    style: TextStyle(
+                      color: Color(0xFF527DAA),
+                      letterSpacing: 1.5,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  _login(LoginBloc bloc, BuildContext context) async {
+    Map info = await usuarioProvider.login(bloc.email, bloc.password);
+    if (info['ok']) {
+      Navigator.pushReplacementNamed(context, 'home');
+    } else {
+      mostrarAlerta(context, 'Correo y/o Contraseña incorrecta');
+    }
   }
 }

@@ -1,0 +1,35 @@
+{
+    "nombreApp": "Orienta2",
+    "rutas": [
+        {
+            "ruta": "instituciones",
+            "icon": "school",
+            "texto": "Instituciones"
+        },
+        {
+            "ruta": "test",
+            "icon": "assignment",
+            "texto": "Test Vocacional"
+        },
+        {
+            "ruta": "noticias",
+            "icon": "description",
+            "texto": "Noticias"
+        },
+        {
+            "ruta": "convocatorias",
+            "icon": "calendar_today",
+            "texto": "Convocatorias"
+        },
+        {
+            "ruta": "resultado",
+            "icon": "assessment",
+            "texto": "Resultado"
+        },
+        {
+            "ruta": "perfil",
+            "icon": "user",
+            "texto": "Perfil"
+        }
+    ]
+}
