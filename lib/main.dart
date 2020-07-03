@@ -4,11 +4,13 @@ import 'package:orientat/splash.dart';
 import 'package:orientat/src/bloc/provider.dart';
 import 'package:orientat/src/pages/edit_profile_page.dart';
 import 'package:orientat/src/pages/home_page.dart';
+import 'package:orientat/src/pages/instituciones_page.dart';
 import 'package:orientat/src/pages/instrucciones_page.dart';
 import 'package:orientat/src/pages/ipn_page.dart';
 import 'package:orientat/src/pages/login_page.dart';
 import 'package:orientat/src/pages/mapa_page.dart';
 import 'package:orientat/src/pages/noticias_page.dart';
+import 'package:orientat/src/pages/plantel_page.dart';
 import 'package:orientat/src/pages/profile_page.dart';
 import 'package:orientat/src/pages/registro_page.dart';
 import 'package:orientat/src/pages/resultado_page.dart';
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
           'overboard': (BuildContext context) => Overboard(),
           'login': (BuildContext context) => LoginPage(),
           'registro': (BuildContext context) => RegistroPage(),
+          'instituciones': (BuildContext context) => InstitucionesPage(),
           'instrucciones': (BuildContext context) => InstruccionesPage(),
           'universidades': (BuildContext context) => UniversidadesPage(),
           'test': (BuildContext context) => TestFacil(),
