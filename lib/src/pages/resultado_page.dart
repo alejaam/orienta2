@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
 import 'package:orientat/src/widgets/action.dart';
 
 class ResultadoPage extends StatelessWidget {
   final String text;
-  const ResultadoPage({Key key, @required this.text}) : super(key: key);
+  const ResultadoPage({Key key, this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _prefs = PreferenciasUsuario();
+    // _prefs.resultado = text;
     return Scaffold(
       backgroundColor: Color.fromRGBO(187, 225, 250, 1),
       appBar: AppBar(
@@ -19,7 +22,7 @@ class ResultadoPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            resultCard(context),
+            resultCard(context, _prefs.resultado),
             Column(
               children: <Widget>[
                 SizedBox(
@@ -53,7 +56,7 @@ class ResultadoPage extends StatelessWidget {
     );
   }
 
-  Widget resultCard(context) {
+  Widget resultCard(context, text) {
     return Container(
       // decoration: BoxDecoration(border: Border.all()),
       height: 250.0,

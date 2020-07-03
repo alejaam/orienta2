@@ -43,6 +43,15 @@ class PreferenciasUsuario {
     _prefs.setBool('firstInit', value);
   }
 
+  // GET y SET del primer inicio de app
+  get resultado {
+    return _prefs.getString('resultado') ?? '';
+  }
+
+  set resultado(String value) {
+    _prefs.setString('resultado', value);
+  }
+
   // GET y SET del nombre
   get name {
     return _prefs.getString('name') ?? '';

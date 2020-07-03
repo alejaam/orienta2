@@ -26,6 +26,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _prefs = PreferenciasUsuario();
     return Provider(
       child: MaterialApp(
         theme: ThemeData(primarySwatch: Colors.blue),
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
           'noticias': (BuildContext context) => NoticiasPage(),
           // 'ubicacion': (BuildContext context) => UbicacionPage(),
           'map': (BuildContext context) => MapaPage(),
-          'resultado': (BuildContext context) => ResultadoPage(),
+          'resultado': (BuildContext context) => ResultadoPage(text: _prefs.resultado),
           // 'convocatorias': (BuildContext context) => ConvocatoriasPage(),
         },
         onGenerateRoute: (settings) {

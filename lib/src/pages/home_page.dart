@@ -58,6 +58,13 @@ class _HomePageState extends State<HomePage> {
     for (var opt in data) {
       if (opt['ruta'] == 'perfil') {
         continue;
+      } else {
+        if (opt['ruta'] == 'resultado') {
+          if (_prefs.resultado != '') {
+          } else {
+            continue;
+          }
+        }
       }
       final widgetTemp = GestureDetector(
         onTap: () {},

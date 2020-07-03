@@ -30,7 +30,9 @@ class UsuarioProvider {
       _prefs.mail = correo;
       _prefs.name = decodeResp['displayName'];
       _prefs.tokenRefresh = decodeResp['refreshToken'];
+      _prefs.foto = decodeResp['profilePicture'];
 
+      this.cargarInfoUsuario();
       return {'ok': true, 'token': decodeResp['idToken']};
     } else {
       return {'ok': false, 'mensaje': decodeResp['error']['message']};
@@ -67,18 +69,6 @@ class UsuarioProvider {
       print(decodeData['name']);
       _prefs.tokenUser = decodeData['name'];
 
-      final userData2 = {
-        'nombre': nombre,
-        'correo': correo,
-        'tokenUser': _prefs.tokenUser,
-        'localId': decodeResp['localId']
-      };
-
-      final url2 =
-          '$_url/usuarios/${_prefs.tokenUser}.json?auth=${_prefs.token}';
-      final respUsuario2 = await http.patch(url2, body: json.encode(userData2));
-      final decodeData2 = json.decode(respUsuario2.body);
-
       return {'ok': true, 'token': decodeResp['idToken']};
     } else {
       return {'ok': false, 'mensaje': decodeResp['error']['message']};
@@ -93,6 +83,7 @@ class UsuarioProvider {
     final nameData = {
       'idToken': _prefs.token,
       'displayName': usuario.nombre,
+      'photoUrl': usuario.fotoUrl,
       'returnSecureToken': true
     };
 
@@ -185,6 +176,7 @@ class UsuarioProvider {
 
     final respData = json.decode(resp.body);
     print(respData);
+
     return respData['secure_url'];
   }
 
@@ -194,6 +186,7 @@ class UsuarioProvider {
     _prefs.name = '';
     _prefs.tokenUser = '';
     _prefs.foto = '';
+    _prefs.resultado = '';
   }
 
   bool get isAuthenticated {

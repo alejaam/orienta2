@@ -33,7 +33,7 @@ class MyDrawer extends StatelessWidget {
                   borderRadius: BorderRadius.circular(100),
                   child: _prefs.foto != ''
                       ? Image.network(_prefs.foto, fit: BoxFit.cover)
-                      : AssetImage('asstes/no-image.png'),
+                      : Image.asset('asstes/no-image.png', fit: BoxFit.cover),
                 ),
               ),
             ),

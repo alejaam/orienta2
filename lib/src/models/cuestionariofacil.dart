@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orientat/src/pages/resultado_page.dart';
+import 'package:orientat/src/preferencias_usuario/preferencias_usuario.dart';
 
 class Question {
   String question;
@@ -19,7 +20,7 @@ class CuestionarioFacil {
   int area5 = 0;
 
   bool respuestausuario = false;
-
+  final _prefs = PreferenciasUsuario();
   List<Question> _questionBank = [
     Question(
         '1. Diseñar programas de computación y explorar nuevas aplicaciones tecnológicas para uso del internet.'),
@@ -158,6 +159,7 @@ class CuestionarioFacil {
       area3 = 0;
       area4 = 0;
       area5 = 0;
+      _prefs.resultado =resultado;
       final route = new MaterialPageRoute(builder: (context) {
         return ResultadoPage(text: resultado);
       });
